@@ -1,0 +1,46 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="stack mt-auto gap-12 p-12 text-center text-sm">
+  <div class="flex gap-1">
+    <p>
+      Developed in an Airstream Classic with <a href="https://astro.build/"
+        >Astro</a
+      >
+    </p>
+    <p>&copy; {currentYear} Roadshow Creative</p>
+  </div>
+  <p class="flex flex-wrap justify-center gap-4">
+    <a
+      href="https://github.com/sethburtonhall"
+      class="hover:text-current focus:text-current">GitHub</a
+    >
+  </p>
+</footer>
+<style>
+  footer a {
+    color: var(--stone-400);
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  @media (min-width: 50em) {
+    footer {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2.5rem 5rem;
+    }
+
+    .group {
+      flex-direction: row;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .socials {
+      justify-content: flex-end;
+    }
+  }
+</style>

@@ -1,0 +1,54 @@
+---
+import Icon from "./Icon.astro";
+import type { iconPaths } from "./IconPaths";
+
+const skills: {
+  title: string;
+  description: string;
+  icon: keyof typeof iconPaths;
+}[] = [
+  {
+    title: "Technical",
+    description:
+      "With over a decade of experience, I excel in leveraging my technical skills to drive positive outcomes in web development projects, ensuring high-quality solutions and efficient problem-solving.",
+    icon: "terminal-window",
+  },
+  {
+    title: "Collaborative",
+    description:
+      "Adept at collaborating with diverse teams to tackle complex challenges, I bring a collaborative approach to problem-solving, fostering teamwork, creativity, and effective solutions.",
+    icon: "strategy",
+  },
+  {
+    title: "Relational",
+    description:
+      "Known for building strong relationships and connections, I excel in understanding the needs of clients, colleagues, and stakeholders, fostering trust and collaboration for successful project outcomes.",
+    icon: "handshake",
+  },
+  {
+    title: "Creative",
+    description:
+      "A creative thinker with a passion for innovation, I bring fresh ideas and imaginative solutions to web development projects, pushing boundaries and delivering engaging and impactful results.",
+    icon: "creative",
+  },
+];
+---
+
+<section
+  class="grid grid-cols-1 gap-12 rounded-3xl border border-stone-200 p-10 shadow lg:grid-cols-2 lg:gap-16 lg:rounded-xl lg:p-6"
+>
+  {
+    skills.map((skill) => (
+      <div class="stack gap-2 lg:gap-4">
+        <Icon
+          icon={skill.icon}
+          color="var(--accent-regular)"
+          size="2.5rem"
+          gradient
+        />
+        <h2 class="text-lg lg:text-2xl">{skill.title}</h2>
+        <p class="text-[--stone-500]">{skill.description}</p>
+      </div>
+    ))
+  }
+</section>

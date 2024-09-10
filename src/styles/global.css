@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* shadcn ui */
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 215 20.2% 65.1%;
+    --radius: 0.5rem;
+
+    /* Astro custom */
+
+    /* Colors */
+    --stone-50: hsl(0, 0%, 0.5%);
+    --stone-100: hsl(0, 0%, 10%);
+    --stone-200: hsl(0, 0%, 20%);
+    --stone-300: hsl(0, 0%, 30%);
+    --stone-400: hsl(0, 0%, 40%);
+    --stone-500: hsl(0, 0%, 50%);
+    --stone-600: hsl(0, 0%, 60%);
+    --stone-700: hsl(0, 0%, 70%);
+    --stone-800: hsl(0, 0%, 80%);
+    --stone-900: hsl(0, 0%, 90%);
+    --stone-999-basis: 0, 0%, 100%;
+    --stone-999_40: hsla(var(--stone-999-basis), 0.4);
+    --stone-999: #ffffff;
+
+    --accent-light: #c561f6;
+    --accent-regular: #7611a6;
+    --accent-dark: #1c0056;
+    --accent-overlay: hsla(280, 89%, 67%, 0.33);
+    --accent-subtle-overlay: var(--accent-overlay);
+    --accent-text-over: var(--stone-999);
+
+    --link-color: var(--accent-regular);
+
+    /* Gradients */
+    --gradient-stop-1: var(--accent-light);
+    --gradient-stop-2: var(--accent-regular);
+    --gradient-stop-3: var(--accent-dark);
+    --gradient-subtle: linear-gradient(
+      150deg,
+      var(--stone-900) 19%,
+      var(--stone-999) 150%
+    );
+    --gradient-accent: linear-gradient(
+      150deg,
+      var(--gradient-stop-1),
+      var(--gradient-stop-2),
+      var(--gradient-stop-3)
+    );
+    --gradient-accent-orange: linear-gradient(
+      150deg,
+      #ca7879,
+      var(--accent-regular),
+      var(--accent-dark)
+    );
+    --gradient-stroke: linear-gradient(
+      180deg,
+      var(--stone-900),
+      var(--stone-700)
+    );
+
+    /* Shadows */
+    --shadow-sm: 0px 6px 3px rgba(9, 11, 17, 0.01),
+      0px 4px 2px rgba(9, 11, 17, 0.01), 0px 2px 2px rgba(9, 11, 17, 0.02),
+      0px 0px 1px rgba(9, 11, 17, 0.03);
+    --shadow-md: 0px 28px 11px rgba(9, 11, 17, 0.01),
+      0px 16px 10px rgba(9, 11, 17, 0.03), 0px 7px 7px rgba(9, 11, 17, 0.05),
+      0px 2px 4px rgba(9, 11, 17, 0.06);
+    --shadow-lg: 0px 62px 25px rgba(9, 11, 17, 0.01),
+      0px 35px 21px rgba(9, 11, 17, 0.05), 0px 16px 16px rgba(9, 11, 17, 0.1),
+      0px 4px 9px rgba(9, 11, 17, 0.12);
+
+    /* Text Sizes */
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-md: 1.125rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.625rem;
+    --text-2xl: 2.125rem;
+    --text-3xl: 2.625rem;
+    --text-4xl: 3.5rem;
+    --text-5xl: 4.5rem;
+
+    /* Fonts */
+    --font-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    --font-body: "Public Sans", var(--font-system);
+    --font-brand: Rubik, var(--font-system);
+
+    /* Transitions */
+    --theme-transition: 0.2s ease-in-out;
+  }
+
+  :root.theme-dark {
+    /* shadcn ui */
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 60 9.1% 97.8%;
+    --primary-foreground: 24 9.8% 10%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 24 5.7% 82.9%;
+
+    /* Astro custom */
+    --stone-50: hsl(0, 0%, 95%);
+    --stone-100: hsl(0, 0%, 90%);
+    --stone-200: hsl(0, 0%, 80%);
+    --stone-300: hsl(0, 0%, 70%);
+    --stone-400: hsl(0, 0%, 60%);
+    --stone-500: hsl(0, 0%, 50%);
+    --stone-600: hsl(0, 0%, 40%);
+    --stone-700: hsl(0, 0%, 30%);
+    --stone-800: hsl(0, 0%, 20%);
+    --stone-900: hsl(0, 0%, 10%);
+    --stone-999-basis: 225, 31%, 5%;
+    --stone-999: #090b11;
+
+    --accent-light: #1c0056;
+    --accent-regular: #7611a6;
+    --accent-dark: #c561f6;
+    --accent-overlay: hsla(280, 89%, 67%, 0.33);
+    --accent-subtle-overlay: hsla(281, 81%, 36%, 0.33);
+    --accent-text-over: var(--stone-50);
+
+    --link-color: var(--accent-dark);
+
+    --gradient-stop-1: #4c11c6;
+    --gradient-subtle: linear-gradient(
+      150deg,
+      var(--stone-900) 19%,
+      var(--stone-999) 81%
+    );
+    --gradient-accent-orange: linear-gradient(
+      150deg,
+      #ca7879,
+      var(--accent-regular),
+      var(--accent-light)
+    );
+    --gradient-stroke: linear-gradient(
+      180deg,
+      var(--stone-600),
+      var(--stone-800)
+    );
+
+    --shadow-sm: 0px 6px 3px rgba(255, 255, 255, 0.01),
+      0px 4px 2px rgba(255, 255, 255, 0.01),
+      0px 2px 2px rgba(255, 255, 255, 0.02),
+      0px 0px 1px rgba(255, 255, 255, 0.03);
+    --shadow-md: 0px 28px 11px rgba(255, 255, 255, 0.01),
+      0px 16px 10px rgba(255, 255, 255, 0.03),
+      0px 7px 7px rgba(255, 255, 255, 0.05),
+      0px 2px 4px rgba(255, 255, 255, 0.06);
+    --shadow-lg: 0px 62px 25px rgba(255, 255, 255, 0.01),
+      0px 35px 21px rgba(255, 255, 255, 0.05),
+      0px 16px 16px rgba(255, 255, 255, 0.1),
+      0px 4px 9px rgba(255, 255, 255, 0.12);
+  }
+
+  html,
+  body {
+    @apply min-h-full overflow-x-hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  *,
+  *::after,
+  *::before {
+    @apply m-0 box-border;
+  }
+
+  img {
+    @apply h-auto max-w-full;
+  }
+
+  a {
+    @apply text-[var(--link-color)] transition-colors hover:text-[var(--link-color)] focus:text-[var(--link-color)];
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold leading-[1.1] text-foreground;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h5 {
+    @apply text-lg;
+  }
+
+  h6 {
+    @apply text-base;
+  }
+
+  .stack {
+    @apply flex flex-col;
+  }
+}
