@@ -1,5 +1,27 @@
+---
+interface Props {
+  url?: string;
+}
+
+const { url } = Astro.props;
+---
+
 <div
-  class="text-textOver flex gap-2 whitespace-nowrap rounded-full border border-accent-regular bg-accent-regular p-4 text-md leading-5"
+  class="flex gap-2 whitespace-nowrap rounded-full bg-[--accent-regular] p-4 text-md leading-5 text-stone-100"
 >
-  <slot />
+  {
+    url ? (
+      <a href={url} class="no-link flex gap-2">
+        <slot />
+      </a>
+    ) : (
+      <slot />
+    )
+  }
 </div>
+
+<style>
+  .no-link {
+    @apply text-stone-100 no-underline hover:text-stone-100;
+  }
+</style>

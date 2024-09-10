@@ -210,7 +210,7 @@
   }
 
   a {
-    @apply text-[var(--link-color)] transition-colors hover:text-[var(--link-color)] focus:text-[var(--link-color)];
+    @apply cursor-pointer text-[--accent-regular] underline underline-offset-2 transition-colors hover:text-[var(--link-color)] focus:text-[var(--link-color)];
   }
 
   h1,
