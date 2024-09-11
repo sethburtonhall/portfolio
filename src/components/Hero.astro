@@ -1,7 +1,7 @@
 ---
 interface Props {
   title: string;
-  tagline: string | (string | { text: string })[];
+  tagline?: string | (string | { text: string })[];
   align?: "start" | "center";
 }
 
@@ -19,16 +19,16 @@ const { align = "center", tagline, title } = Astro.props;
       <h1 class="text-3xl tracking-tighter lg:text-5xl">
         {title}
       </h1>
-      <p class="text-lg text-[--stone-500] lg:text-xl">
+      <p class="text-lg text-stone-500 lg:text-xl">
         {
           typeof tagline === "string"
             ? tagline
-            : tagline.map((item) =>
+            : tagline?.map((item) =>
                 typeof item === "string" ? (
                   item
                 ) : (
                   <Fragment>
-                    <span class="font-semibold text-[--accent-regular]">
+                    <span class="font-semibold text-accent-regular">
                       {item.text}
                     </span>
                   </Fragment>

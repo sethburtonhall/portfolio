@@ -2,14 +2,21 @@
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  project: CollectionEntry<"work">;
+  project: CollectionEntry<"web">;
 }
 
 const { data, slug } = Astro.props.project;
+
+const formattedTitle = data.title
+  .replace(/-/g, " ")
+  .replace(/\b\w/g, (c: any) => c.toUpperCase());
 ---
 
-<a class="card" href={`/work/${slug}`}>
-  <span class="title">{data.title}</span>
+<a
+  class="card"
+  href={`/${data.category === "web" ? "web" : "creative"}/${slug}`}
+>
+  <span class="title">{formattedTitle}</span>
   <img
     src={data.img}
     alt={data.img_alt || ""}

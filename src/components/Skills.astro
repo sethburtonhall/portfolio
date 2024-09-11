@@ -6,36 +6,58 @@ const skills: {
   title: string;
   description: string;
   icon: keyof typeof iconPaths;
+  keySkills?: string[];
+  keyStrengths?: string[];
+  collaborativeTools?: string[];
+  creativeAspects?: string[];
 }[] = [
   {
     title: "Technical",
     description:
-      "With over a decade of experience, I excel in leveraging my technical skills to drive positive outcomes in web development projects, ensuring high-quality solutions and efficient problem-solving.",
-    icon: "terminal-window",
-  },
-  {
-    title: "Collaborative",
-    description:
-      "Adept at collaborating with diverse teams to tackle complex challenges, I bring a collaborative approach to problem-solving, fostering teamwork, creativity, and effective solutions.",
-    icon: "strategy",
+      "With over a decade of experience in web development I've worked with a variety of tools to built websites and applications using scalable JAMstack and Composable principles. I'm committed to continuous learning, ensuring I stay at the forefront of web development to deliver efficient, high-quality solutions.",
+    icon: "terminalWindow",
+    keySkills: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Composable Architecture",
+    ],
   },
   {
     title: "Relational",
     description:
-      "Known for building strong relationships and connections, I excel in understanding the needs of clients, colleagues, and stakeholders, fostering trust and collaboration for successful project outcomes.",
+      "Throughout my career, I've excelled in building strong relationships across diverse teams and stakeholders. I effectively communicate to both technical and non-technical audiences. I always prioritizing clear communication, understanding client needs, and fostering trust. This relational approach has been crucial in ensuring project alignment and success.",
     icon: "handshake",
+    keyStrengths: [
+      "Stakeholder Communication",
+      "Client Relations",
+      "Cross-functional Collaboration",
+    ],
+  },
+  {
+    title: "Collaborative",
+    description:
+      "My approach to web development is inherently collaborative. I've led the creation of composable web application architectures that enable seamless cross-departmental cooperation. Proficient in tools like Jira, Slack, and Git, I facilitate efficient teamwork and project management. My background in creative producing enhances my ability to bring together diverse perspectives, fostering an environment where creativity and technical expertise combine to solve complex challenges.",
+    icon: "strategy",
+    collaborativeTools: ["Agile Methodologies", "Jira", "Git", "VS Code"],
   },
   {
     title: "Creative",
     description:
-      "A creative thinker with a passion for innovation, I bring fresh ideas and imaginative solutions to web development projects, pushing boundaries and delivering engaging and impactful results.",
+      "My unique blend of technical expertise and creative background, including an M.F.A. in Creative Producing, brings an innovative perspective to web development projects. This creativity manifests in my approach to UI/UX design, where I create engaging and impactful user experiences. I combine technical skill with creative problem-solving, resulting in solutions that are not just functional, but also imaginative and user-centric.",
     icon: "creative",
+    creativeAspects: [
+      "UI/UX Innovation",
+      "Creative Problem-solving",
+      "Interdisciplinary Approach",
+    ],
   },
 ];
 ---
 
 <section
-  class="grid grid-cols-1 gap-12 rounded-3xl border border-stone-200 p-10 shadow lg:grid-cols-2 lg:gap-16 lg:rounded-xl lg:p-6"
+  class="grid grid-cols-1 gap-12 rounded-xl border border-stone-200 p-10 shadow lg:grid-cols-2 lg:gap-16 lg:p-6"
 >
   {
     skills.map((skill) => (
@@ -47,7 +69,7 @@ const skills: {
           gradient
         />
         <h2 class="text-lg lg:text-2xl">{skill.title}</h2>
-        <p class="text-[--stone-500]">{skill.description}</p>
+        <p class="text-stone-500">{skill.description}</p>
       </div>
     ))
   }

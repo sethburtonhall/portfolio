@@ -20,12 +20,12 @@ const iconLinks: {
   {
     label: "GitHub",
     href: "https://github.com/sethburtonhall",
-    icon: "github-logo",
+    icon: "githubLogo",
   },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/sethburtonhall/",
-    icon: "linkedin-logo",
+    icon: "linkedinLogo",
   },
 ];
 ---
@@ -34,7 +34,7 @@ const iconLinks: {
   <div class="menu-header">
     <a href="/" class="site-title">
       <Icon
-        icon="terminal-window"
+        icon="terminalWindow"
         color="var(--accent-regular)"
         size="1.6em"
         gradient
@@ -282,11 +282,11 @@ const iconLinks: {
 
   .social:hover,
   .social:focus {
-    color: var(--accent-light);
+    color: var(--accent-regular);
   }
 
-  :global(.theme-dark) .social:hover,
-  :global(.theme-dark) .social:focus {
+  :global(.dark) .social:hover,
+  :global(.dark) .social:focus {
     color: var(--accent-text-over);
   }
 

@@ -1,7 +1,74 @@
 ---
+import { getCollection } from "astro:content";
+
 import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import Hero from "@/components/Hero.astro";
+import Grid from "@/components/Grid.astro";
+import PortfolioPreview from "@/components/PortfolioPreview.astro";
+import ContactCTA from "@/components/ContactCTA.astro";
+import Icon from "@/components/Icon.astro";
+
+const projects = (await getCollection("web")).sort(
+  (
+    a: { data: { publishDate: number } },
+    b: { data: { publishDate: number } },
+  ) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+
+const showcases = projects.filter(
+  (project: any) => project.data.subCategory === "showcase",
+);
+const shortstacks = projects.filter(
+  (project: any) => project.data.subCategory === "shortstack",
+);
 ---
 
-<BaseLayout title="Seth Hall Creative | Web" description="Explore Web Projects">
-    <main></main>
+<BaseLayout
+  title="Web Projects | Seth Hall Creative"
+  description="Learn about Seth Hall's most recent projects"
+>
+  <div class="stack gap-20">
+    <main class="stack container gap-8">
+      <Hero
+        title="Web Projects"
+        tagline="See my most recent web projects below to get an idea of my past experience."
+        align="start"
+      />
+      <div class="stack gap-12">
+        <div class="stack gap-4">
+          <div class="flex items-center gap-2">
+            <Icon icon="computer" size="2em" />
+            <h3 class="max-md:text-xl">Showcases</h3>
+          </div>
+          <Grid>
+            {
+              showcases.map((project: any) => (
+                <li>
+                  <PortfolioPreview project={project} />
+                </li>
+              ))
+            }
+          </Grid>
+        </div>
+
+        <div class="stack gap-4">
+          <div class="flex items-center gap-2">
+            <Icon icon="stack" size="2em" />
+            <h3 class="max-md:text-xl">ShortStacks</h3>
+          </div>
+          <Grid>
+            {
+              shortstacks.map((project: any) => (
+                <li>
+                  <PortfolioPreview project={project} />
+                </li>
+              ))
+            }
+          </Grid>
+        </div>
+      </div>
+    </main>
+    <ContactCTA />
+  </div>
 </BaseLayout>

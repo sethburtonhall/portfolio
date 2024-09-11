@@ -3,5 +3,6 @@
   "prettier.documentSelectors": ["**/*.{astro,ts}"],
   "prettier.tabWidth": 4,
   "prettier.bracketSameLine": true,
-  "prettier.printWidth": 80
+  "prettier.printWidth": 80,
+  "editor.wordWrap": "on"
 }

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
+  darkMode: "selector",
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     container: {
@@ -8,11 +8,6 @@ module.exports = {
       padding: "1.5rem",
     },
     extend: {
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
       shadow: {
         DEFAULT: "var(--shadow-sm)",
         md: "var(--shadow-md)",
@@ -30,16 +25,32 @@ module.exports = {
         "5xl": "var(--text-5xl)",
       },
       colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        stone: {
+          50: "var(--stone-50)",
+          100: "var(--stone-100)",
+          200: "var(--stone-200)",
+          300: "var(--stone-300)",
+          400: "var(--stone-400)",
+          500: "var(--stone-500)",
+          600: "var(--stone-600)",
+          700: "var(--stone-700)",
+          800: "var(--stone-800)",
+          900: "var(--stone-900)",
+        },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          light: "hsl(var(--accent-light))",
-          regular: "hsl(var(--accent-regular))",
-          dark: "hsl(var(--accent-dark))",
-          overlay: "hsl(var(--accent-overlay))",
-          subtleOverlay: "hsl(var(--accent-subtle-overlay))",
-          textOver: "hsl(var(--accent-text-over))",
+          DEFAULT: "var(--accent)",
+          light: "var(--accent-light)",
+          regular: "var(--accent-regular)",
+          dark: "var(--accent-dark)",
+          overlay: "var(--accent-overlay)",
+          subtleOverlay: "var(--accent-subtle-overlay)",
+          textOver: "var(--accent-text-over)",
+        },
+        link: {
+          DEFAULT: "var(--link)",
+          hover: "var(--link-hover)",
         },
       },
     },

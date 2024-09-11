@@ -7,11 +7,14 @@ const { url } = Astro.props;
 ---
 
 <div
-  class="flex gap-2 whitespace-nowrap rounded-full bg-[--accent-regular] p-4 text-md leading-5 text-stone-100"
+  class="pill flex gap-2 whitespace-nowrap rounded-full bg-accent-regular p-4 text-md font-semibold leading-5 text-stone-900 dark:text-stone-100"
 >
   {
     url ? (
-      <a href={url} class="no-link flex gap-2">
+      <a
+        href={url}
+        class="flex gap-2 text-stone-900 no-underline hover:text-stone-900 dark:text-stone-100 dark:hover:text-stone-100"
+      >
         <slot />
       </a>
     ) : (
@@ -19,9 +22,3 @@ const { url } = Astro.props;
     )
   }
 </div>
-
-<style>
-  .no-link {
-    @apply text-stone-100 no-underline hover:text-stone-100;
-  }
-</style>

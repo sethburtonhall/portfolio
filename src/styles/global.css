@@ -5,8 +5,8 @@
 @layer base {
   :root {
     /* Colors */
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
+    --background: hsl(0 0% 100%);
+    --foreground: hsl(222.2 47.4% 11.2%);
     --stone-50: hsl(0, 0%, 0.5%);
     --stone-100: hsl(0, 0%, 10%);
     --stone-200: hsl(0, 0%, 20%);
@@ -28,7 +28,8 @@
     --accent-subtle-overlay: var(--accent-overlay);
     --accent-text-over: var(--stone-999);
 
-    --link-color: var(--accent-regular);
+    --link: var(--accent-regular);
+    --link-hover: var(--accent-light);
 
     /* Gradients */
     --gradient-stop-1: var(--accent-light);
@@ -68,8 +69,6 @@
       0px 35px 21px rgba(9, 11, 17, 0.05), 0px 16px 16px rgba(9, 11, 17, 0.1),
       0px 4px 9px rgba(9, 11, 17, 0.12);
 
-    --radius: 0.5rem;
-
     /* Text Sizes */
     --text-sm: 0.875rem;
     --text-base: 1rem;
@@ -92,9 +91,9 @@
     --theme-transition: 0.2s ease-in-out;
   }
 
-  :root.theme-dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 60 9.1% 97.8%;
+  :root.dark {
+    --background: hsl(20 14.3% 4.1%);
+    --foreground: hsl(60 9.1% 97.8%);
     --stone-50: hsl(0, 0%, 95%);
     --stone-100: hsl(0, 0%, 90%);
     --stone-200: hsl(0, 0%, 80%);
@@ -114,8 +113,6 @@
     --accent-overlay: hsla(280, 89%, 67%, 0.33);
     --accent-subtle-overlay: hsla(281, 81%, 36%, 0.33);
     --accent-text-over: var(--stone-50);
-
-    --link-color: var(--accent-dark);
 
     --gradient-stop-1: #4c11c6;
     --gradient-subtle: linear-gradient(
@@ -170,7 +167,7 @@
   }
 
   a {
-    @apply cursor-pointer text-[--accent-regular] underline underline-offset-2 transition-colors hover:text-[var(--link-color)] focus:text-[var(--link-color)];
+    @apply hover:text-link-hover focus:text-link-hover text-link cursor-pointer underline underline-offset-2 transition-colors;
   }
 
   h1,

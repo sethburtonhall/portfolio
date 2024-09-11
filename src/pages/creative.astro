@@ -1,10 +1,42 @@
 ---
+import { getCollection } from "astro:content";
+
 import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import Hero from "@/components/Hero.astro";
+import Grid from "@/components/Grid.astro";
+import PortfolioPreview from "@/components/PortfolioPreview.astro";
+import ContactCTA from "@/components/ContactCTA.astro";
+
+const projects = (await getCollection("creative")).sort(
+  (
+    a: { data: { publishDate: number } },
+    b: { data: { publishDate: number } },
+  ) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
 ---
 
 <BaseLayout
-    title="Seth Hall Creative | Creative"
-    description="Explore Creative Projects"
+  title="Creative Projects | Seth Hall Creative"
+  description="Learn about Seth Hall's most recent projects"
 >
-    <main></main>
+  <div class="stack gap-20">
+    <main class="stack container gap-8">
+      <Hero
+        title="Creative Projects"
+        tagline="See my most recent creative projects below to get an idea of my past experience."
+        align="start"
+      />
+      <Grid>
+        {
+          projects.map((project: any) => (
+            <li>
+              <PortfolioPreview project={project} />
+            </li>
+          ))
+        }
+      </Grid>
+    </main>
+    <ContactCTA />
+  </div>
 </BaseLayout>
