@@ -2,10 +2,12 @@
 interface Props {
   title: string;
   tagline?: string | (string | { text: string })[];
+  url?: string;
+  githubUrl?: string;
   align?: "start" | "center";
 }
 
-const { align = "center", tagline, title } = Astro.props;
+const { align = "center", title, tagline, url, githubUrl } = Astro.props;
 ---
 
 <section
@@ -16,9 +18,28 @@ const { align = "center", tagline, title } = Astro.props;
 >
   <div class="stack gap-8">
     <div class="stack gap-2">
-      <h1 class="text-3xl tracking-tighter lg:text-5xl">
-        {title}
-      </h1>
+      <div class="stack md::flex-row items-center justify-between gap-4">
+        <h1 class="text-3xl tracking-tighter lg:text-5xl">
+          {title}
+        </h1>
+        <div class="flex items-center gap-2">
+          {
+            url && (
+              <a href={url} class="btn btn-blue">
+                View Site
+              </a>
+            )
+          }
+
+          {
+            githubUrl && (
+              <a href={githubUrl} class="btn btn-black">
+                Github
+              </a>
+            )
+          }
+        </div>
+      </div>
       <p class="text-lg text-stone-500 lg:text-xl">
         {
           typeof tagline === "string"
@@ -47,3 +68,22 @@ const { align = "center", tagline, title } = Astro.props;
     </div>
   </div>
 </section>
+
+<style>
+  .btn {
+    @apply rounded-lg px-3 py-1 font-bold no-underline;
+  }
+  .btn-blue {
+    @apply bg-blue-500 text-white;
+  }
+  .btn-blue:hover {
+    @apply bg-blue-700;
+  }
+
+  .btn-black {
+    @apply bg-black text-white;
+  }
+  .btn-black:hover {
+    @apply bg-stone-300;
+  }
+</style>

@@ -4,6 +4,11 @@
 
 @layer base {
   :root {
+    /* Screens */
+    --breakpoint-sm: 20em; /* 320px */
+    --breakpoint-md: 50em; /* 800px */
+    --breakpoint-lg: 60em; /* 960px */
+
     /* Colors */
     --background: hsl(0 0% 100%);
     --foreground: hsl(222.2 47.4% 11.2%);
@@ -21,6 +26,9 @@
     --stone-999_40: hsla(var(--stone-999-basis), 0.4);
     --stone-999: #ffffff;
 
+    --muted: hsl(210 40% 96.1%);
+    --muted-foreground: hsl(215.4 16.3% 46.9%);
+
     --accent-light: #c561f6;
     --accent-regular: #7611a6;
     --accent-dark: #1c0056;
@@ -29,7 +37,7 @@
     --accent-text-over: var(--stone-999);
 
     --link: var(--accent-regular);
-    --link-hover: var(--accent-light);
+    --link-hover: var(--accent-dark);
 
     /* Gradients */
     --gradient-stop-1: var(--accent-light);
@@ -167,7 +175,7 @@
   }
 
   a {
-    @apply hover:text-link-hover focus:text-link-hover text-link cursor-pointer underline underline-offset-2 transition-colors;
+    @apply cursor-pointer text-link underline underline-offset-2 transition-colors hover:text-link-hover focus:text-link-hover;
   }
 
   h1,
@@ -176,7 +184,7 @@
   h4,
   h5,
   h6 {
-    @apply font-bold leading-[1.1] text-foreground;
+    @apply font-brand font-bold leading-[1.1] text-foreground;
   }
 
   h1 {

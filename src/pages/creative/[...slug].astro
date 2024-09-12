@@ -29,14 +29,14 @@ const { Content } = await entry.render();
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
   <div class="stack gap-20">
-    <div class="stack gap-15">
+    <div class="stack gap-16">
       <header>
         <div class="stack container gap-2">
           <a class="back-link" href="/creative/"
             ><Icon icon="arrowLeft" /> Creative Projects</a
           >
           <Hero title={entry.data.title} align="start">
-            <div class="details">
+            <div class="details w-full">
               <div class="tags">
                 {entry.data.tags.map((t: unknown) => <Pill>{t}</Pill>)}
               </div>

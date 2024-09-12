@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import { getGithubRepos, type repoProps } from "@/lib/utils";
+import { getGithubRepos, type GithubRepo } from "@/lib/utils";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Hero from "@/components/Hero.astro";
@@ -10,8 +10,8 @@ import ContactCTA from "@/components/ContactCTA.astro";
 
 interface Props {
   entry: CollectionEntry<"web">;
-  showcases: repoProps[];
-  shortstacks: repoProps[];
+  showcases: GithubRepo[];
+  shortstacks: GithubRepo[];
 }
 
 type RepoProps = Pick<Props, "showcases" | "shortstacks">;
@@ -35,31 +35,80 @@ export async function getStaticPaths() {
 const { entry, showcases, shortstacks } = Astro.props;
 const { Content } = await entry.render();
 
+// log out showcase names
+console.log(
+  "showcases",
+  showcases.map((repo) => repo.name),
+);
+console.log(
+  "shortstacks",
+  shortstacks.map((repo) => repo.name),
+);
+
+// if a Github repo and a markdown entry both exist then use the showcase description/url/githubUrl/topics, ELSE use the shortstack description, OR if there is no Github repo then use the markdown description/url/githubUrl/tags
 const description = showcases.find((repo) => repo.name === entry.data.title)
   ? showcases.find((repo) => repo.name === entry.data.title)?.description
-  : shortstacks.find((repo) => repo.name === entry.data.title)?.description;
+  : shortstacks.find((repo) => repo.name === entry.data.title)?.description ||
+    entry.data.description;
+
+const url = showcases.find((repo) => repo.name === entry.data.title)
+  ? showcases.find((repo) => repo.name === entry.data.title)?.homepage
+  : shortstacks.find((repo) => repo.name === entry.data.title)?.homepage ||
+    entry.data.url;
+
+const githubUrl = showcases.find((repo) => repo.name === entry.data.title)
+  ? showcases.find((repo) => repo.name === entry.data.title)?.html_url
+  : shortstacks.find((repo) => repo.name === entry.data.title)?.html_url ||
+    entry.data.github;
 
 const topics = showcases.find((repo) => repo.name === entry.data.title)
   ? showcases.find((repo) => repo.name === entry.data.title)?.topics
-  : shortstacks.find((repo) => repo.name === entry.data.title)?.topics;
+  : shortstacks.find((repo) => repo.name === entry.data.title)?.topics ||
+    entry.data.tags;
 
+// capitalize the first letter of each topic
+const capitalizedTopics = topics?.map(
+  (tag: string) => tag.charAt(0).toUpperCase() + tag.slice(1),
+);
+// filter out the showcase and shortstack tags on Github
+const filteredTopics = capitalizedTopics?.filter(
+  (tag: string) => tag !== "Showcase" && tag !== "Shortstack",
+);
+
+// format the title to uppercase dks and replace the dashes with spaces and capitalize the first letter of each word
 const formattedTitle = entry.data.title
+  .replace(/dks-/g, "DKS ")
   .replace(/-/g, " ")
   .replace(/\b\w/g, (c: any) => c.toUpperCase());
+
+// format the topics to change -api to API
+const formattedTopics = filteredTopics?.map((tag: string) =>
+  tag
+    .replace(/-api/g, " API")
+    .replace(/cms/g, " CMS")
+    .replace(/Buildinpublic/g, "Build In Public")
+    .replace(/Aws/g, "AWS")
+    .replace(/-/g, " "),
+);
 ---
 
 <BaseLayout title={formattedTitle} description={description}>
   <div class="stack gap-20">
-    <div class="stack gap-15">
+    <div class="stack gap-16">
       <header>
         <div class="stack container gap-2">
           <a class="back-link" href="/web/"
             ><Icon icon="arrowLeft" /> Web Projects</a
           >
-          <Hero title={formattedTitle} align="start">
-            <div class="details">
+          <Hero
+            title={formattedTitle}
+            url={url}
+            githubUrl={githubUrl}
+            align="start"
+          >
+            <div class="details w-full">
               <div class="tags">
-                {topics?.map((t: unknown) => <Pill>{t}</Pill>)}
+                {formattedTopics?.map((t: unknown) => <Pill>{t}</Pill>)}
               </div>
               <p class="description">{description}</p>
             </div>
@@ -86,7 +135,7 @@ const formattedTitle = entry.data.title
 <style>
   header {
     padding-bottom: 2.5rem;
-    border-bottom: 1px solid var(--gray-800);
+    border-bottom: 1px solid var(--stone-800);
   }
 
   .back-link {
@@ -110,6 +159,7 @@ const formattedTitle = entry.data.title
   .description {
     font-size: var(--text-lg);
     max-width: 54ch;
+    text-align: right;
   }
 
   .content {
@@ -133,7 +183,7 @@ const formattedTitle = entry.data.title
     border-radius: 1.5rem;
     box-shadow: var(--shadow-sm);
     background: var(--gradient-subtle);
-    border: 1px solid var(--gray-800);
+    border: 1px solid var(--stone-800);
   }
 
   .content :global(blockquote) {
@@ -143,7 +193,7 @@ const formattedTitle = entry.data.title
     line-height: 1.1;
     padding-inline-start: 1.5rem;
     border-inline-start: 0.25rem solid var(--accent-dark);
-    color: var(--gray-0);
+    color: var(--stone-0);
   }
 
   .back-link,

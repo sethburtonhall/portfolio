@@ -27,7 +27,7 @@ const projects = (await getCollection("creative")).sort(
         tagline="See my most recent creative projects below to get an idea of my past experience."
         align="start"
       />
-      <Grid>
+      <Grid variant="offset">
         {
           projects.map((project: any) => (
             <li>

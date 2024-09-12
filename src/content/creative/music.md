@@ -3,7 +3,7 @@ category: creative
 title: Music
 publishDate: 2020-03-02 00:00:00
 img: /assets/creative/music.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: A close up of a mixing board
 description: |
   A selection of my music
 tags:

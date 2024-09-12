@@ -4,7 +4,7 @@ subCategory: showcase
 title: uniform-remix-movie
 publishDate: 2020-03-02 00:00:00
 img: /assets/web/showcases/uniform-remix-movie.png
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: Uniform Remix Movie app logo
 ---
 
 ## Level-two heading

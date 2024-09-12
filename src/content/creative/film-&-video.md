@@ -3,7 +3,7 @@ category: creative
 title: Film & Video
 publishDate: 2020-03-02 00:00:00
 img: /assets/creative/film-video.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: a screenshot of a video editing app
 description: |
   A collection of short films and videos
 tags:

@@ -4,7 +4,7 @@ subCategory: shortstack
 title: github-user-search
 publishDate: 2020-03-02 00:00:00
 img: /assets/web/short-stacks/github-user-search.png
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: Github logo on a black background
 ---
 
 ## Level-two heading

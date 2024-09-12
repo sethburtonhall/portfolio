@@ -4,7 +4,7 @@ subCategory: shortstack
 title: scratch-notes-app
 publishDate: 2020-03-02 00:00:00
 img: /assets/web/short-stacks/scratch-notes.png
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: Scratch - a notes app logo
 ---
 
 ## Level-two heading

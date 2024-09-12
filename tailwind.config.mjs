@@ -7,6 +7,14 @@ module.exports = {
       center: true,
       padding: "1.5rem",
     },
+    // screens: {
+    //   sm: "var(--breakpoint-sm)",
+    //   md: "var(--breakpoint-md)",
+    //   lg: "var(--breakpoint-lg)",
+    // },
+    fontFamily: {
+      brand: "var(--font-brand)",
+    },
     extend: {
       shadow: {
         DEFAULT: "var(--shadow-sm)",
@@ -25,8 +33,15 @@ module.exports = {
         "5xl": "var(--text-5xl)",
       },
       colors: {
+        // CSS variables in globals.css allow colors to be used in vanilla css <style> tag
+        // this mapping allows colors to be used as inline utility classes
         background: "var(--background)",
         foreground: "var(--foreground)",
+        muted: "var(--muted)",
+        muted: {
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
+        },
         stone: {
           50: "var(--stone-50)",
           100: "var(--stone-100)",

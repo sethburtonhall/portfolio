@@ -3,7 +3,7 @@ category: creative
 title: Development Slate
 publishDate: 2020-03-02 00:00:00
 img: /assets/creative/development-slate.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: An collage of cartoon bands as comps for The Intergalactic Space Band
 description: |
   Have a look at my film development slate
 tags:

@@ -8,6 +8,7 @@ interface Props {
 const { data, slug } = Astro.props.project;
 
 const formattedTitle = data.title
+  .replace(/dks-/g, "DKS ")
   .replace(/-/g, " ")
   .replace(/\b\w/g, (c: any) => c.toUpperCase());
 ---

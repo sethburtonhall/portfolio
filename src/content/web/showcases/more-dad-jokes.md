@@ -2,8 +2,9 @@
 category: web
 subCategory: showcase
 title: more-dad-jokes
-publishDate: 2020-03-02 00:00:00
+publishDate: 2019-03-02 00:00:00
 img: /assets/web/showcases/more-dad-jokes.png
+img_alt: Laughing and Rolling Eyes emojis
 ---
 
 ## Level-two heading

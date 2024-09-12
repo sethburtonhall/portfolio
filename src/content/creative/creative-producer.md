@@ -3,7 +3,7 @@ category: creative
 title: Creative Producer
 publishDate: 2020-03-02 00:00:00
 img: /assets/creative/creative-producer.png
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: multi-colored graphic with the Creative Producer IG logo
 description: |
   Genuine stories, practical insight, and inspirational victories from the unsung heroes of independent film
 tags:
