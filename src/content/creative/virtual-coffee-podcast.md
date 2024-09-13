@@ -2,7 +2,7 @@
 category: creative
 title: Virtual Coffee Podcast
 publishDate: 2020-03-02 00:00:00
-img: /assets/creative/virtual-coffee-podcast.png
+img: /assets/creative/virtual-coffee-logo.png
 img_alt: a graphic for the Virtual Coffee episode with Seth Hall as guest
 description: |
   A discussion about how my work as a Creative Producer in film translates to software and tech

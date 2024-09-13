@@ -4,10 +4,14 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import ContactCTA from "@/components/ContactCTA.astro";
 import Hero from "@/components/Hero.astro";
 
-import airstream1 from "@/public/assets/airstream1.jpg";
-import airstream2 from "@/public/assets/airstream2.jpg";
-import airstream3 from "@/public/assets/airstream3.jpg";
-import airstream4 from "@/public/assets/airstream4.jpg";
+import airstream1 from "@/public/assets/about/airstream1.jpg";
+import blockbuster from "@/public/assets/about/blockbuster.jpg";
+import seth1 from "@/public/assets/about/seth1.jpg";
+import sasquatch from "@/public/assets/about/sasquatch.jpg";
+import dude from "@/public/assets/about/dude.jpg";
+import airstreamClassic from "@/public/assets/about/airstream-classic.jpg";
+import airstream3 from "@/public/assets/about/airstream3.jpg";
+import airstream4 from "@/public/assets/about/airstream4.jpg";
 ---
 
 <BaseLayout
@@ -19,90 +23,123 @@ import airstream4 from "@/public/assets/airstream4.jpg";
       <Hero
         title="About"
         tagline="Thanks for stopping by. Read below to learn more about me and my background."
-      >
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div class="col-span-1 row-span-2 md:col-span-2 lg:col-span-2">
-            <Picture
-              src={airstream1}
-              alt="Large collage image"
-              width={800}
-              height={600}
-              class="h-full w-full rounded-lg object-cover"
-            />
-          </div>
-          <div class="flex items-center rounded-lg bg-background p-6">
-            <div>
-              <h2 class="mb-4 text-2xl font-bold">About Us</h2>
-              <p class="text-foreground">
-                We are a creative team passionate about design and innovation.
-              </p>
-            </div>
-          </div>
+      />
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- first grid -->
+        <div class="col-span-1 row-span-2 md:col-span-2 lg:col-span-2">
+          <Picture
+            src={seth1}
+            alt="Large collage image"
+            width={800}
+            height={600}
+            class="h-full w-full rounded-lg object-cover"
+          />
+        </div>
+        <div class="flex items-center rounded-lg bg-background p-6">
           <div>
-            <Picture
-              src={airstream2}
-              alt="Collage image 2"
-              width={400}
-              height={300}
-              class="h-full w-full rounded-lg object-cover"
-            />
-          </div>
-          <div class="flex items-center rounded-lg bg-background p-6">
-            <div>
-              <h3 class="mb-2 text-xl font-semibold">Our Mission</h3>
-              <p class="text-foreground">
-                To create beautiful and functional designs that inspire and
-                delight.
-              </p>
-            </div>
-          </div>
-          <div>
-            <Picture
-              src={airstream3}
-              alt="Collage image 3"
-              width={400}
-              height={300}
-              class="h-full w-full rounded-lg object-cover"
-            />
-          </div>
-          <div class="flex items-center rounded-lg bg-background p-6">
-            <div>
-              <h3 class="mb-2 text-xl font-semibold">Our Approach</h3>
-              <p class="text-foreground">
-                We combine creativity with strategic thinking to deliver
-                outstanding results.
-              </p>
-            </div>
-          </div>
-          <div class="col-span-1 row-span-2 md:col-span-2 lg:col-span-2">
-            <Picture
-              src={airstream4}
-              alt="Large collage image 2"
-              width={800}
-              height={600}
-              class="h-full w-full rounded-lg object-cover"
-            />
-          </div>
-          <div>
-            <Picture
-              src={airstream4}
-              alt="Collage image 4"
-              width={400}
-              height={300}
-              class="h-full w-full rounded-lg object-cover"
-            />
-          </div>
-          <div class="flex items-center rounded-lg bg-background p-6">
-            <div>
-              <h3 class="mb-2 text-xl font-semibold">Our Team</h3>
-              <p class="text-foreground">
-                A diverse group of talented individuals working together to
-                bring ideas to life.
-              </p>
-            </div>
+            <h2 class="mb-4 text-2xl font-bold">About Us</h2>
+            <p class="text-foreground">
+              We are a creative team passionate about design and innovation.
+            </p>
           </div>
         </div>
-      </Hero>
+        <div>
+          <Picture
+            src={airstreamClassic}
+            alt="Collage image 2"
+            width={400}
+            height={300}
+            class="h-full w-full rounded-lg object-cover"
+          />
+        </div>
+
+        <!-- second grid -->
+        <div class="flex items-center rounded-lg bg-background p-6">
+          <div>
+            <h3 class="mb-2 text-xl font-semibold">Our Mission</h3>
+            <p class="text-foreground">
+              To create beautiful and functional designs that inspire and
+              delight.
+            </p>
+          </div>
+        </div>
+        <div>
+          <Picture
+            src={airstream3}
+            alt="Collage image 3"
+            width={400}
+            height={300}
+            class="h-full w-full rounded-lg object-cover"
+          />
+        </div>
+        <div class="flex items-center rounded-lg bg-background p-6">
+          <div>
+            <h3 class="mb-2 text-xl font-semibold">Our Approach</h3>
+            <p class="text-foreground">
+              We combine creativity with strategic thinking to deliver
+              outstanding results.
+            </p>
+          </div>
+        </div>
+
+        <!-- third grid -->
+        <div class="col-span-1 row-span-2 md:col-span-2 lg:col-span-2">
+          <Picture
+            src={airstream4}
+            alt="Large collage image 2"
+            width={800}
+            height={600}
+            class="h-full w-full rounded-lg object-cover"
+          />
+        </div>
+        <div>
+          <Picture
+            src={dude}
+            alt="Collage image 4"
+            width={400}
+            height={300}
+            class="h-full w-full rounded-lg object-cover"
+          />
+        </div>
+        <div class="flex items-center rounded-lg bg-background p-6">
+          <div>
+            <h3 class="mb-2 text-xl font-semibold">Our Team</h3>
+            <p class="text-foreground">
+              A diverse group of talented individuals working together to bring
+              ideas to life.
+            </p>
+          </div>
+        </div>
+
+        <!-- fourth grid -->
+        <div>
+          <Picture
+            src={blockbuster}
+            alt="Collage image 3"
+            width={400}
+            height={300}
+            class="h-full w-full rounded-lg object-cover"
+          />
+        </div>
+        <div class="flex items-center rounded-lg bg-background p-6">
+          <div>
+            <h3 class="mb-2 text-xl font-semibold">Our Approach</h3>
+            <p class="text-foreground">
+              We combine creativity with strategic thinking to deliver
+              outstanding results.
+            </p>
+          </div>
+        </div>
+        <div>
+          <Picture
+            src={sasquatch}
+            alt="Collage image 3"
+            width={400}
+            height={300}
+            class="h-full w-full scale-x-[-1] transform rounded-lg object-cover"
+          />
+        </div>
+      </div>
     </main>
     <ContactCTA />
   </div>

@@ -62,14 +62,18 @@ const { align = "start", title, tagline, url, githubUrl } = Astro.props;
         }
       </p>
     </div>
-    <div
-      class:list={[
-        "hidden gap-4 lg:flex",
-        align === "center" && "justify-center",
-      ]}
-    >
-      <slot />
-    </div>
+    {
+      Astro.slots.has("default") && (
+        <div
+          class:list={[
+            "hidden gap-4 lg:flex",
+            align === "center" && "justify-center",
+          ]}
+        >
+          <slot />
+        </div>
+      )
+    }
   </div>
 </section>
 

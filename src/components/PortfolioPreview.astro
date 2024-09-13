@@ -11,18 +11,32 @@ const formattedTitle = data.title
   .replace(/dks-/g, "DKS ")
   .replace(/-/g, " ")
   .replace(/\b\w/g, (c: any) => c.toUpperCase());
+
+// const makeTitleHidden =
+//   data.title.toLowerCase().includes("creative") ||
+//   data.title.toLowerCase().includes("producer") ||
+//   data.title.toLowerCase().includes("holy") ||
+//   data.title.toLowerCase().includes("smokes");
+
+const makeTitleHidden = false;
+
+const isCreativeProducerImage = data.title
+  .toLowerCase()
+  .includes("creative producer");
 ---
 
 <a
   class="card"
   href={`/${data.category === "web" ? "web" : "creative"}/${slug}`}
 >
-  <span class="title">{formattedTitle}</span>
+  {!makeTitleHidden && <span class="title">{formattedTitle}</span>}
+
   <img
     src={data.img}
     alt={data.img_alt || ""}
     loading="lazy"
     decoding="async"
+    class:list={[isCreativeProducerImage && "rotate-90 scale-[2.0]"]}
   />
 </a>
 
