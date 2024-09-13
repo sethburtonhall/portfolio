@@ -1,0 +1,16 @@
+---
+import Icon from "@/components/Icon.astro";
+
+const { href, icon, children } = Astro.props;
+---
+
+<a href={href} class="btn">
+  <Icon icon={icon} size="1.5em" />
+  <span><slot /></span>
+</a>
+
+<style>
+  .btn {
+    @apply flex gap-2 rounded-md bg-black p-2 px-4 text-md text-white no-underline hover:bg-stone-200 hover:text-white;
+  }
+</style>

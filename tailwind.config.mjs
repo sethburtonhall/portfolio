@@ -7,15 +7,19 @@ module.exports = {
       center: true,
       padding: "1.5rem",
     },
-    // screens: {
-    //   sm: "var(--breakpoint-sm)",
-    //   md: "var(--breakpoint-md)",
-    //   lg: "var(--breakpoint-lg)",
-    // },
     fontFamily: {
       brand: "var(--font-brand)",
     },
     extend: {
+      screens: {
+        // These variables are not working as expected
+        // sm: "var(--breakpoint-sm)",
+        // md: "var(--breakpoint-md)",
+        // lg: "var(--breakpoint-lg)",
+        sm: "40em",
+        md: "50em",
+        lg: "60em",
+      },
       shadow: {
         DEFAULT: "var(--shadow-sm)",
         md: "var(--shadow-md)",

@@ -1,19 +1,21 @@
 ---
-import { cn } from "@/lib/utils";
-
-import Icon from "@/components/Icon.astro";
-
 import { Picture } from "astro:assets";
+import Button from "@/components/Button.astro";
 import cover from "@/public/assets/creative/virtual-coffee-podcast.jpg";
+
+interface Props {
+  className?: string;
+  url: string;
+}
 
 const { className, url } = Astro.props;
 ---
 
 <div
-  class={cn(
-    "max-w-3xl overflow-hidden flex gap-6  m-auto rounded-lg border bg-card text-card-foreground shadow-sm",
+  class:list={[
+    "bg-card text-card-foreground m-auto flex max-w-3xl gap-6 overflow-hidden rounded-lg border shadow-sm",
     className,
-  )}
+  ]}
 >
   <div class="md:flex">
     <div class="relative rounded-lg md:w-64 md:min-w-[256px]">
@@ -45,13 +47,7 @@ const { className, url } = Astro.props;
           </span>
           <span class="text-muted-foreground text-sm"> 55:09 mins </span>
         </div>
-        <a
-          href={url}
-          class="flex gap-2 rounded-md bg-black p-2 px-4 text-md text-white no-underline hover:bg-stone-200 hover:text-white"
-        >
-          <Icon icon="play" size="1.5em" />
-          <span>Listen Now</span>
-        </a>
+        <Button href={url} icon="play">Listen Now</Button>
       </div>
     </div>
   </div>

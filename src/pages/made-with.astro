@@ -1,0 +1,96 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContactCTA from "@/components/ContactCTA.astro";
+
+import Icon from "@/components/Icon.astro";
+import type { iconPaths } from "@/components/IconPaths";
+
+const tools: {
+  title: string;
+  description: string;
+  icon: keyof typeof iconPaths;
+}[] = [
+  {
+    title: "Astro",
+    description:
+      "Astro is a new kind of static site builder that delivers lightning-fast performance with a modern developer experience. This site uses their portfolio template.",
+    icon: "rocket",
+  },
+  {
+    title: "Tailwind CSS",
+    description:
+      "Tailwind CSS is a utility-first CSS framework for rapidly building custom designs.",
+    icon: "swatch",
+  },
+  {
+    title: "Phosphor Icons",
+    description:
+      "Phosphor is a flexible icon family for interfaces, diagrams, presentations — whatever, really.",
+    icon: "phosphorLogo",
+  },
+  {
+    title: "Vite",
+    description:
+      "Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects.",
+    icon: "lightening",
+  },
+  {
+    title: "TypeScript",
+    description:
+      "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.",
+    icon: "typescript",
+  },
+  {
+    title: "GitHub",
+    description:
+      "GitHub is a development platform that allows developers to host and review code, manage projects, and build software.",
+    icon: "githubLogo",
+  },
+  {
+    title: "Netlify",
+    description:
+      "Netlify is the essential platform for the delivery of exceptional and dynamic web experiences, without limitations",
+    icon: "rocketlaunch",
+  },
+];
+---
+
+<BaseLayout
+  title="Seth Hall Creative | About"
+  description="This is the about page of Seth Hall Creative."
+>
+  <div class="stack gap-20">
+    <main class="stack container gap-14">
+      <section class="stack gap-8">
+        <div class="stack gap-2">
+          <div class="stack items-center justify-between gap-4 md:flex-row">
+            <h1 class="text-3xl tracking-tighter lg:text-5xl">Made With</h1>
+          </div>
+          <p class="text-lg text-stone-500 lg:text-xl">
+            A list of tools and technologies used to build this site.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {
+            tools.map((tool) => (
+              <div class="stack gap-2">
+                <Icon
+                  icon={tool.icon}
+                  color="var(--accent-regular)"
+                  size="2.5rem"
+                  gradient
+                />
+                <h2 class="text-lg lg:text-2xl">{tool.title}</h2>
+                <p class="text-stone-500">{tool.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+    </main>
+    <ContactCTA />
+  </div>
+</BaseLayout>

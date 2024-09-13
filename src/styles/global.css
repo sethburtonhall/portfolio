@@ -5,7 +5,8 @@
 @layer base {
   :root {
     /* Screens */
-    --breakpoint-sm: 20em; /* 320px */
+    /* These variables are not working correctly in tailwind.config.mjs */
+    --breakpoint-sm: 40em; /* 640px */
     --breakpoint-md: 50em; /* 800px */
     --breakpoint-lg: 60em; /* 960px */
 
