@@ -33,6 +33,7 @@ const creativeProjects: Project[] = await getCollection("creative");
 
 const projects: Project[] = webProjects
   .concat(creativeProjects)
+  .filter((project: any) => project.data.status !== "draft")
   .filter(
     (project: Project) =>
       !project.data.title.includes("Virtual Coffee Podcast"),
@@ -95,8 +96,8 @@ const mediaUrl =
         <header class="stack section-header gap-2 lg:gap-4">
           <h3>Selected Work</h3>
           <p>
-            Take a look below at some of my featured work for clients from the
-            past few years.
+            Explore a curated selection of my recent projects, showcasing my
+            expertise in web development and creative production.
           </p>
         </header>
 

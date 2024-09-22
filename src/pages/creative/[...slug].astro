@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
+import { Picture } from "astro:assets";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Hero from "@/components/Hero.astro";
@@ -49,7 +50,13 @@ const { Content } = await entry.render();
         <div class="stack content gap-10">
           {
             entry.data.img && (
-              <img src={entry.data.img} alt={entry.data.img_alt || ""} />
+              <Picture
+                src={entry.data.img}
+                alt={entry.data.img_alt || ""}
+                width={800}
+                height={800}
+                loading="eager"
+              />
             )
           }
           <div class="content">

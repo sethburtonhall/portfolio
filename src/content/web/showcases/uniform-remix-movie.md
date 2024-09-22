@@ -5,6 +5,7 @@ title: uniform-remix-movie
 publishDate: 2020-03-02 00:00:00
 img: /assets/web/showcases/uniform-remix-movie.png
 img_alt: Uniform Remix Movie app logo
+status: draft
 ---
 
 ## Level-two heading

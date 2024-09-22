@@ -6,51 +6,80 @@ const skills: {
   title: string;
   description: string;
   icon: keyof typeof iconPaths;
-  keySkills?: string[];
-  keyStrengths?: string[];
-  collaborativeTools?: string[];
-  creativeAspects?: string[];
+  skills?: string[];
 }[] = [
   {
     title: "Technical",
     description:
-      "With over a decade of experience in web development I've worked with a variety of tools to built websites and applications using scalable JAMstack and Composable principles. I'm committed to continuous learning, ensuring I stay at the forefront of web development to deliver efficient, high-quality solutions.",
+      "I specialize in creating dynamic, component-based websites and applications. My expertise spans across front-end and back-end technologies, enabling comprehensive solutions. I leverage modern frameworks and libraries to build scalable, composable systems. Committed to continuous learning, I stay at the forefront of emerging technologies to deliver cutting-edge solutions in this rapidly evolving field.",
     icon: "terminalWindow",
-    keySkills: [
-      "React",
+    skills: [
       "Next.js",
+      "Svelte",
+      "Astro",
       "TypeScript",
       "TailwindCSS",
       "Composable Architecture",
+      "Node.js",
+      "GraphQL",
+      "RESTful APIs",
+      "Git Version Control",
+      "Responsive Web Design",
+      "Performance Optimization",
+      "Accessibility",
+      "Testing",
     ],
   },
   {
     title: "Relational",
     description:
-      "Throughout my career, I've excelled in building strong relationships across diverse teams and stakeholders. I effectively communicate to both technical and non-technical audiences. I always prioritizing clear communication, understanding client needs, and fostering trust. This relational approach has been crucial in ensuring project alignment and success.",
+      "Throughout my career, I've excelled in building strong relationships across diverse teams and stakeholders. I effectively communicate with both technical and non-technical audiences, always prioritizing clear communication, understanding client needs, and fostering trust. This relational approach has been crucial in ensuring project alignment and success.",
     icon: "handshake",
-    keyStrengths: [
+    skills: [
       "Stakeholder Communication",
       "Client Relations",
       "Cross-functional Collaboration",
+      "Active Listening",
+      "Empathy",
+      "Conflict Resolution",
+      "Adaptability",
+      "Interpersonal Skills",
     ],
   },
   {
-    title: "Collaborative/Creative",
+    title: "Collaborative",
     description:
-      "My approach to web development is inherently collaborative. I've led the creation of composable web application architectures that enable seamless cross-departmental cooperation. Proficient in tools like Jira, Slack, and Git, I facilitate efficient teamwork and project management. My background in creative producing enhances my ability to bring together diverse perspectives, fostering an environment where creativity and technical expertise combine to solve complex challenges.",
+      "I thrive in collaborative environments, leveraging my experience with agile methodologies and industry-standard tools. My approach emphasizes teamwork, open communication, and shared problem-solving. I'm adept at using collaborative platforms to streamline workflows, facilitate knowledge sharing, and ensure seamless integration of team efforts. This collaborative mindset not only enhances project outcomes but also fosters a positive and productive work atmosphere.",
     icon: "strategy",
-    collaborativeTools: ["Agile Methodologies", "Jira", "Git", "VS Code"],
+    skills: [
+      "Agile Methodologies",
+      "Jira",
+      "Git",
+      "VS Code",
+      "Slack",
+      "GitHub",
+      "Notion",
+      "Trello",
+      "Confluence",
+      "Microsoft Teams",
+    ],
   },
   {
     title: "Organizational",
     description:
-      "My unique blend of technical expertise and creative background, including an M.F.A. in Creative Producing, brings an innovative perspective to web development projects. This creativity manifests in my approach to UI/UX design, where I create engaging and impactful user experiences. I combine technical skill with creative problem-solving, resulting in solutions that are not just functional, but also imaginative and user-centric.",
+      "My organizational skills are a cornerstone of my professional approach. I excel in project management, utilizing tools and methodologies to ensure efficient workflow and timely delivery. My ability to prioritize tasks, manage resources effectively, and maintain clear documentation contributes significantly to project success. I'm adept at creating structured environments that promote productivity and clarity, whether working independently or coordinating team efforts.",
     icon: "creative",
-    creativeAspects: [
-      "UI/UX Innovation",
-      "Creative Problem-solving",
-      "Interdisciplinary Approach",
+    skills: [
+      "Project Management",
+      "Task Prioritization",
+      "Resource Allocation",
+      "Time Management",
+      "Documentation",
+      "Process Optimization",
+      "Goal Setting",
+      "Workflow Planning",
+      "Deadline Management",
+      "Strategic Planning",
     ],
   },
 ];
@@ -69,6 +98,11 @@ const skills: {
           gradient
         />
         <h2 class="text-lg lg:text-2xl">{skill.title}</h2>
+        {/* <ul class="flex list-none flex-wrap gap-1 text-sm italic text-stone-500">
+          {skill.skills?.map((skill) => (
+            <li>{skill} | </li>
+          ))}
+        </ul> */}
         <p class="text-stone-500">{skill.description}</p>
       </div>
     ))

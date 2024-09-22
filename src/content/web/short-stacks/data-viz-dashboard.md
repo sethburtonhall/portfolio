@@ -1,14 +1,13 @@
 ---
 category: web
 subCategory: shortstack
-title: scratch-notes-app
+title: data-viz-dashboard
 publishDate: 2020-03-02 00:00:00
-img: /assets/web/short-stacks/scratch-notes.png
-img_alt: Scratch - a notes app logo
-status: draft
+img: /assets/web/short-stacks/data-viz.jpg
+img_alt: Photo by Pietro Jeng aka @pietrozj on Unsplash
 ---
 
-## Introduction
+### Introduction
 
 A data visualization dashboard is a powerful tool designed to help data analysts and business managers visualize and interpret complex datasets. By providing interactive and customizable visualizations, a dashboard enables users to gain insights and make data-driven decisions efficiently.
 

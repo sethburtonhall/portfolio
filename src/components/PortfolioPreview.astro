@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
 
 interface Props {
   project: CollectionEntry<"web">;
@@ -31,12 +32,16 @@ const isCreativeProducerImage = data.title
 >
   {!makeTitleHidden && <span class="title">{formattedTitle}</span>}
 
-  <img
+  <Image
     src={data.img}
     alt={data.img_alt || ""}
-    loading="lazy"
-    decoding="async"
-    class:list={[isCreativeProducerImage && "rotate-90 scale-[2.0]"]}
+    width={800}
+    height={800}
+    loading="eager"
+    class:list={[
+      "h-full w-full rounded-lg object-cover",
+      isCreativeProducerImage && "rotate-90 scale-[2.0]",
+    ]}
   />
 </a>
 

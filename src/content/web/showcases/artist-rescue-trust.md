@@ -13,5 +13,3 @@ tags:
   - GraphQL
   - Netlify
 ---
-
-this is markdown content

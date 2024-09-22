@@ -4,7 +4,6 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import ContactCTA from "@/components/ContactCTA.astro";
 import Hero from "@/components/Hero.astro";
 
-import airstream1 from "@/public/assets/about/airstream1.jpg";
 import blockbuster from "@/public/assets/about/blockbuster.jpg";
 import seth1 from "@/public/assets/about/seth1.jpg";
 import sasquatch from "@/public/assets/about/sasquatch.jpg";
@@ -22,7 +21,7 @@ import airstream4 from "@/public/assets/about/airstream4.jpg";
     <main class="stack container gap-14">
       <Hero
         title="About"
-        tagline="Thanks for stopping by. Read below to learn more about me and my background."
+        tagline="Thanks for stopping by. Read below to learn more about me."
       />
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         <!-- first grid -->
@@ -32,14 +31,17 @@ import airstream4 from "@/public/assets/about/airstream4.jpg";
             alt="Large collage image"
             width={800}
             height={600}
+            loading="eager"
             class="h-full w-full rounded-lg object-cover"
           />
         </div>
         <div class="flex items-center rounded-lg bg-background p-6">
           <div>
-            <h2 class="mb-4 text-2xl font-bold">About Us</h2>
+            <h2 class="mb-4 text-2xl font-bold">Who are you?</h2>
             <p class="text-foreground">
-              We are a creative team passionate about design and innovation.
+              I am a creative professional with a passion for web development. I
+              am always looking for new opportunities to collaborate, learn, and
+              grow. Let's chat!
             </p>
           </div>
         </div>
@@ -49,6 +51,7 @@ import airstream4 from "@/public/assets/about/airstream4.jpg";
             alt="Collage image 2"
             width={400}
             height={300}
+            loading="eager"
             class="h-full w-full rounded-lg object-cover"
           />
         </div>
@@ -56,10 +59,12 @@ import airstream4 from "@/public/assets/about/airstream4.jpg";
         <!-- second grid -->
         <div class="flex items-center rounded-lg bg-background p-6">
           <div>
-            <h3 class="mb-2 text-xl font-semibold">Our Mission</h3>
+            <h3 class="mb-2 text-xl font-semibold">Are you experienced?</h3>
             <p class="text-foreground">
-              To create beautiful and functional designs that inspire and
-              delight.
+              Yes, I have been working in the creative arts for most of my life
+              and in web development for over 10 years. I pride myself on my
+              unique combination of creative, technical, organizational, and
+              interpersonal skills.
             </p>
           </div>
         </div>
@@ -69,15 +74,21 @@ import airstream4 from "@/public/assets/about/airstream4.jpg";
             alt="Collage image 3"
             width={400}
             height={300}
+            loading="eager"
             class="h-full w-full rounded-lg object-cover"
           />
         </div>
         <div class="flex items-center rounded-lg bg-background p-6">
           <div>
-            <h3 class="mb-2 text-xl font-semibold">Our Approach</h3>
+            <h3 class="mb-2 text-xl font-semibold">
+              What's with the Airstream
+            </h3>
             <p class="text-foreground">
-              We combine creativity with strategic thinking to deliver
-              outstanding results.
+              Well, my family and I sold our house in 2020, spent 2 years
+              transitioning to a nomadic lifestyle and now live full time in our
+              renovated 1994 Airstream Classic. This is us boondocking in Beuna
+              Vista, Colorado where we were greeted each morning by the majestic
+              Mount Princeton.
             </p>
           </div>
         </div>
@@ -89,6 +100,7 @@ import airstream4 from "@/public/assets/about/airstream4.jpg";
             alt="Large collage image 2"
             width={800}
             height={600}
+            loading="eager"
             class="h-full w-full rounded-lg object-cover"
           />
         </div>
@@ -98,15 +110,16 @@ import airstream4 from "@/public/assets/about/airstream4.jpg";
             alt="Collage image 4"
             width={400}
             height={300}
+            loading="eager"
             class="h-full w-full rounded-lg object-cover"
           />
         </div>
         <div class="flex items-center rounded-lg bg-background p-6">
           <div>
-            <h3 class="mb-2 text-xl font-semibold">Our Team</h3>
+            <h3 class="mb-2 text-xl font-semibold">What's with the hat?</h3>
             <p class="text-foreground">
-              A diverse group of talented individuals working together to bring
-              ideas to life.
+              I like hats, but only have one that fits me and apparently I never
+              take it off. LOL!
             </p>
           </div>
         </div>
@@ -118,15 +131,17 @@ import airstream4 from "@/public/assets/about/airstream4.jpg";
             alt="Collage image 3"
             width={400}
             height={300}
+            loading="eager"
             class="h-full w-full rounded-lg object-cover"
           />
         </div>
         <div class="flex items-center rounded-lg bg-background p-6">
           <div>
-            <h3 class="mb-2 text-xl font-semibold">Our Approach</h3>
+            <h3 class="mb-2 text-xl font-semibold">Any memorable moments?</h3>
             <p class="text-foreground">
-              We combine creativity with strategic thinking to deliver
-              outstanding results.
+              For sure! The last remaining Blockbuster in Bend, Oregon.
+              Christmas in Palm Springs, California. Hanging with Sasquatch in
+              the Redwoods.
             </p>
           </div>
         </div>
@@ -136,6 +151,7 @@ import airstream4 from "@/public/assets/about/airstream4.jpg";
             alt="Collage image 3"
             width={400}
             height={300}
+            loading="eager"
             class="h-full w-full scale-x-[-1] transform rounded-lg object-cover"
           />
         </div>

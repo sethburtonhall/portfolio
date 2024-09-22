@@ -9,12 +9,14 @@ import PortfolioPreview from "@/components/PortfolioPreview.astro";
 import ContactCTA from "@/components/ContactCTA.astro";
 import Icon from "@/components/Icon.astro";
 
-const projects = (await getCollection("web")).sort(
-  (
-    a: { data: { publishDate: number } },
-    b: { data: { publishDate: number } },
-  ) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
-);
+const projects = (await getCollection("web"))
+  .filter((project: any) => project.data.status !== "draft")
+  .sort(
+    (
+      a: { data: { publishDate: number } },
+      b: { data: { publishDate: number } },
+    ) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+  );
 
 const showcases = projects.filter(
   (project: any) => project.data.subCategory === "showcase",
@@ -32,7 +34,7 @@ const shortstacks = projects.filter(
     <main class="stack container gap-8">
       <Hero
         title="Web Projects"
-        tagline="See my most recent web projects below to get an idea of my past experience."
+        tagline="Explore this collection of web projects to get an idea of my past experience."
         align="start"
       />
       <div class="stack gap-24">
