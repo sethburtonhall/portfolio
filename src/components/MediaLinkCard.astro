@@ -13,7 +13,7 @@ const { className, url } = Astro.props;
 
 <div
   class:list={[
-    "bg-card text-card-foreground m-auto flex max-w-3xl gap-6 overflow-hidden rounded-lg border shadow-sm",
+    "bg-card text-card-foreground w-fullgap-6 flex overflow-hidden rounded-lg border shadow-sm",
     className,
   ]}
 >
@@ -30,7 +30,7 @@ const { className, url } = Astro.props;
     <div class="stack justify-between p-6">
       <div>
         <h5 class="mb-1">From Film Production to Web Developer</h5>
-        <p class="text-muted-foreground mb-2 text-sm">
+        <p class="mb-2 text-sm text-muted-foreground">
           The Virtual Coffee Podcast • August 9, 2022
         </p>
         <p class="mb-4 text-sm">
@@ -42,10 +42,10 @@ const { className, url } = Astro.props;
       </div>
       <div class="flex items-center justify-between">
         <div class="stack">
-          <span class="text-muted-foreground text-sm"
+          <span class="text-sm text-muted-foreground"
             >Season 6, Episode 2
           </span>
-          <span class="text-muted-foreground text-sm"> 55:09 mins </span>
+          <span class="text-sm text-muted-foreground"> 55:09 mins </span>
         </div>
         <Button href={url} icon="play">Listen Now</Button>
       </div>

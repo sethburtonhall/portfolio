@@ -1,4 +1,4 @@
-# Portfolio | Seth Hall
+<!-- # Portfolio | Seth Hall
 
 [https://www.sethhallcreative.com/](https://www.sethhallcreative.com/)
 
@@ -58,4 +58,4 @@
 
 ## CI/CD
 
-- Deployed automatically to Netlify when pushed to Github
+- Deployed automatically to Netlify when pushed to Github -->

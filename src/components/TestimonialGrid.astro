@@ -1,0 +1,78 @@
+---
+import TestimonialCard, { type Testimonial } from "./TestimonialCard.astro";
+
+const testimonials: Testimonial[] = [
+  {
+    name: "Kurt Wuerfele",
+    title: "President and Executive Coach",
+    quote:
+      "I highly recommend working with Seth. He is a true asset to any team.",
+    testimonial:
+      "Seth’s passion and dedication to his work are unmatched, and his commitment to authenticity and collaboration are values that he truly lives by. As a leadership and development coach, I have witnessed firsthand how his approach to work creates a supportive and empowering workplace culture, where creativity and innovation thrive. His unique blend of skills makes him a true asset to any team. If you are looking for a creative partner who embodies the values of authentic communication and collaboration, I highly recommend working with Seth.",
+    image: "../assets/testimonials/kurt-wuerfele.jpg",
+    bgColor: "bg-purple-800",
+    textColor: "text-white",
+  },
+  {
+    name: "Curtis Edwards",
+    title: "Design Experience Manager",
+    quote: "Seth was an Outstanding teammate.",
+    testimonial:
+      "Seth was an OUTSTANDING teammate to collaborate with in our tenure together. He was not only quick to ask questions but he even quicker to provide solutions – even on problems that I hadn't even crossed the bridge for yet. He was a great pleasure to work with. I'd do it again in a heartbeat!",
+    image: "../assets/testimonials/curtis-edwards.jpg",
+    bgColor: "bg-slate-600",
+    textColor: "text-white",
+  },
+  {
+    name: "Tim Benniks",
+    title: "Developer Experience Lead at Contentstack",
+    quote:
+      "Seth is creative, flexible, and able to adapt to changes in circumstances",
+    testimonial:
+      "Seth and I worked together at Uniform where he grew from demo engineer to technical product owner in a short time. His leadership skills and overview of different disciplines' needs from a product demo are excellent. He managed developers across cultures and countries and presented to execs every week. Seth is creative, flexible, and able to adapt to changes in circumstances. Next to all this, his knowledge of web development and design is deep, and he is a team player.",
+    image: "../assets/testimonials/tim-benniks.jpg",
+    bgColor: "bg-white",
+    textColor: "text-slate-900",
+  },
+  {
+    name: "Hannah Callaway",
+    title: "Communications Consultant & Writer",
+    quote:
+      "Seth was an excellent collaborator — a critical skill for any good colleague to possess.",
+    testimonial:
+      "I enjoyed working with Seth to publish creative, message-focused content for UNCSA. Seth’s organized and intentional approach to his work was much appreciated when juggling ever-evolving production and post-production schedules. He took the time to research and ensure that the team was utilizing all tools that were available to streamline our processes. I’m grateful that our paths crossed, and know that many others will be thrilled for the opportunity to work alongside Seth.",
+    image: "../assets/testimonials/hannah-callaway.jpg",
+    bgColor: "bg-slate-800",
+    textColor: "text-white",
+  },
+  {
+    name: "Connor Cox",
+    title: "UX/UI Designer",
+    quote:
+      "Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and learning from their experiences was easy.",
+    testimonial:
+      "The staff seem genuinely concerned about my progress which I find really refreshing. The program gave me the confidence necessary to be able to go out in the world and present myself as a capable junior developer. The standard is above the rest. You will get the personal attention you need from an incredible community of smart and amazing people.",
+    image: "../assets/testimonials/connor-cox.jpg",
+    bgColor: "bg-slate-900",
+    textColor: "text-white",
+  },
+];
+---
+
+<div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:grid-rows-4">
+  <div class="col-start-1 col-end-6 row-start-1 row-end-3">
+    <TestimonialCard {...testimonials[0]} className="h-full" />
+  </div>
+  <div class="col-start-6 col-end-10 row-start-1 row-end-3">
+    <TestimonialCard {...testimonials[1]} className="h-full" />
+  </div>
+  <div class="col-start-10 col-end-13 row-start-1 row-end-6">
+    <TestimonialCard {...testimonials[2]} className="h-full" />
+  </div>
+  <div class="col-start-1 col-end-5 row-start-3 row-end-6">
+    <TestimonialCard {...testimonials[3]} className="h-full" />
+  </div>
+  <div class="col-start-5 col-end-10 row-start-3 row-end-6">
+    <TestimonialCard {...testimonials[4]} className="h-full" />
+  </div>
+</div>

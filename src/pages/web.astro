@@ -41,11 +41,11 @@ const shortstacks = projects.filter(
         <div class="stack gap-4">
           <div class="flex items-center gap-2">
             <Icon icon="swatch" size="2em" />
-            <h3 class="max-md:text-xl">Showcases</h3>
+            <h3 class="max-md:text-xl">ShortStacks</h3>
           </div>
-          <Grid>
+          <Grid variant="offsetEven" class="!pb-0">
             {
-              showcases.map((project: any) => (
+              shortstacks.map((project: any) => (
                 <li>
                   <PortfolioPreview project={project} />
                 </li>
@@ -55,13 +55,13 @@ const shortstacks = projects.filter(
         </div>
 
         <div class="stack gap-4">
-          <div class="flex items-center gap-2">
+          <div class="flex items-center justify-end gap-2">
+            <h3 class="max-md:text-xl">Showcases</h3>
             <Icon icon="stack" size="2em" />
-            <h3 class="max-md:text-xl">ShortStacks</h3>
           </div>
-          <Grid>
+          <Grid variant="offset" class="!pb-0">
             {
-              shortstacks.map((project: any) => (
+              showcases.map((project: any) => (
                 <li>
                   <PortfolioPreview project={project} />
                 </li>

@@ -1,0 +1,37 @@
+---
+export interface Testimonial {
+  name: string;
+  title: string;
+  quote: string;
+  testimonial: string;
+  image: string;
+  bgColor: string;
+  textColor: string;
+  className?: string;
+}
+
+const {
+  name,
+  title,
+  quote,
+  testimonial,
+  image,
+  bgColor,
+  textColor,
+  className,
+} = Astro.props as Testimonial;
+---
+
+<div class={`rounded-xl p-8 shadow-xl ${bgColor} ${textColor} ${className}`}>
+  <div class="mb-6 flex items-center">
+    <img src={image} alt={name} class="mr-4 size-12 rounded-full" />
+    <div>
+      <h5 class={`font-semibold ${textColor}`}>{name}</h5>
+      <p class="text-sm opacity-75">{title}</p>
+    </div>
+  </div>
+  <p class="relative mb-4 text-lg font-semibold">
+    {quote}
+  </p>
+  <p class="text-sm leading-relaxed opacity-70">{testimonial}</p>
+</div>

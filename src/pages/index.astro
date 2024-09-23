@@ -11,6 +11,7 @@ import CallToAction from "@/components/CallToAction.astro";
 import Icon from "@/components/Icon.astro";
 import ContactCTA from "@/components/ContactCTA.astro";
 import PortfolioPreview from "@/components/PortfolioPreview.astro";
+import TestimonialGrid from "@/components/TestimonialGrid.astro";
 
 import { Picture } from "astro:assets";
 import avatar from "@/public/assets/mtn_avatar.png";
@@ -87,11 +88,23 @@ const mediaUrl =
           <Picture src={avatar} alt="Hero" loading="eager" />
         </div>
       </header>
-
       <Skills />
     </div>
 
     <main class="stack container m-auto gap-20 lg:gap-48">
+      <section class="section with-background with-cta">
+        <header class="stack section-header gap-2 lg:gap-4">
+          <h3>Recommendations</h3>
+          <p>
+            Discover what my past collaborators and co-workers have to say about
+            working with me.
+          </p>
+        </header>
+        <div class="gallery">
+          <TestimonialGrid />
+        </div>
+      </section>
+
       <section class="section with-background with-cta">
         <header class="stack section-header gap-2 lg:gap-4">
           <h3>Selected Work</h3>
@@ -121,7 +134,7 @@ const mediaUrl =
         </div>
       </section>
 
-      <section class="section with-background bg-variant">
+      <section class="section with-background bg-variant with-cta">
         <header class="section-header stack !max-w-none lg:gap-4">
           <h3>A Career Changer's Story</h3>
           <p>
@@ -139,7 +152,7 @@ const mediaUrl =
   </div>
 </BaseLayout>
 
-<style>
+<style is:global>
   .section {
     display: grid;
     gap: 2rem;
