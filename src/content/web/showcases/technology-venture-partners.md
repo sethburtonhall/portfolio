@@ -1,7 +1,7 @@
 ---
 category: web
 subCategory: showcase
-title: technology-venture-partners
+title: TVP
 description: Accelerating innovators & entrepreneurs through active investment
 url: https://tvp.com/
 publishDate: 2020-03-02 00:00:00

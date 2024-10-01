@@ -6,31 +6,18 @@ img: /assets/creative/creative-producer.png
 img_alt: multi-colored graphic with the Creative Producer IG logo
 description: |
   Genuine stories, practical insight, and inspirational victories from the unsung heroes of independent film
+url: https://www.instagram.com/the.creative.producer/?hl=en
 tags:
-  - Creative Producing
-  - Development
   - Film
+  - Community
+  - Social Media
 ---
 
-## Level-two heading
+<blockquote class="" cite="Me - a few years ago">
+Creative Producers are the cornerstone of an independent film. They take a concept and make it a reality. They have an understanding of all aspects of filmmaking, from script development to sales and distribution. They are the unsung heros of independent film.
+</blockquote>
+<cite class="block text-right text-lg text-foreground">Me - a few years ago</cite>
 
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
+## Introduction
 
-Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-
-Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
-
-### Level-three heading
-
-Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl pretium fusce.
-
-### Level-three heading
-
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
-
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
-
-#### Level-four heading
-
-- We noted this
-- And also this other point
+I received a MFA in Creative Producing from The University of North Carolina School of the Arts in 2018. The Creative Producer was an Instagram account that I started to share my and other's experiences and insights as a Creative Producer in the film industry.

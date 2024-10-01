@@ -20,10 +20,6 @@ const formattedTitle = data.title
 //   data.title.toLowerCase().includes("smokes");
 
 const makeTitleHidden = false;
-
-const isCreativeProducerImage = data.title
-  .toLowerCase()
-  .includes("creative producer");
 ---
 
 <a
@@ -38,10 +34,7 @@ const isCreativeProducerImage = data.title
     width={800}
     height={800}
     loading="eager"
-    class:list={[
-      "h-full w-full object-cover",
-      isCreativeProducerImage && "rotate-90 scale-[2.0]",
-    ]}
+    class:list={["h-full w-full object-cover"]}
   />
 </a>
 

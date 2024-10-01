@@ -1,7 +1,7 @@
 ---
 category: web
 subCategory: shortstack
-title: newsletter-signup-form
+title: newsletter-signup
 publishDate: 2020-03-02 00:00:00
 img: /assets/web/short-stacks/newsletter-signup.png
 img_alt: a Newsletter signup component on a gradient blue background

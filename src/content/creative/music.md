@@ -8,9 +8,8 @@ description: |
   A selection of my music from 1999 to 2008
 url: https://soundcloud.com/middle8media/sets
 tags:
-  - Music
   - Songwriting
-  - Production
+  - Music Production
 ---
 
 <blockquote class="" cite="John Davis - The Lees of Memory">
@@ -19,4 +18,4 @@ That's what rock and roll's supposed to do,
 The records pick my up when I can't move,  
 That's what rock and roll's supposed to prove
 </blockquote>
-<cite class="block text-right text-base text-foreground">John Davis - The Lees of Memory</cite>
+<cite class="block text-right text-lg text-foreground">John Davis - The Lees of Memory</cite>

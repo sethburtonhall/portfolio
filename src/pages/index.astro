@@ -54,9 +54,9 @@ const mediaUrl =
 
 <BaseLayout>
   <div class="stack gap-20 lg:gap-48">
-    <div class="stack container m-auto gap-8 lg:gap-20">
+    <div class="stack container m-auto gap-20">
       <header
-        class="grid items-center gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]"
+        class="container grid items-center gap-6 lg:grid-cols-2 lg:gap-24"
       >
         <Hero
           title="Hello, my name is Seth Hall"
@@ -83,7 +83,7 @@ const mediaUrl =
           </Pill>
         </Hero>
         <div
-          class="mx-auto aspect-[5/4] w-3/4 overflow-hidden rounded-xl object-cover object-top shadow-md lg:order-last lg:aspect-square lg:w-full"
+          class="aspect-[5/4] overflow-hidden rounded-xl object-cover object-top shadow-md lg:order-last lg:aspect-square"
         >
           <Picture src={avatar} alt="Hero" loading="eager" />
         </div>

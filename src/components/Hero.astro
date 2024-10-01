@@ -10,41 +10,53 @@ interface Props {
 }
 
 const { align = "start", title, tagline, url, githubUrl } = Astro.props;
+const hasUrl = url || githubUrl;
 ---
 
 <section
   class:list={[
-    align === "start" && "text-center md:text-left",
+    align === "start" && "text-center lg:text-left",
     align === "center" && "text-center",
   ]}
 >
   <div class="stack gap-8">
-    <div class="stack gap-2">
-      <div class="stack items-center justify-between gap-4 md:flex-row">
-        <h1 class="text-3xl tracking-tighter lg:text-5xl">
+    <div class:list={["stack items-center gap-2", hasUrl && "items-stretch"]}>
+      <div
+        class:list={[
+          "stack items-center justify-center gap-4 md:flex-row",
+          hasUrl && "justify-between",
+        ]}
+      >
+        <h1 class="text-3xl tracking-tighter md:text-4xl xl:text-5xl">
           {title}
         </h1>
-        <div class="flex items-center gap-2">
-          {
-            url && (
-              <a href={url} class="btn btn-link flex items-center gap-2">
-                <Icon icon="externalLink" size="1.3em" />
-                View Site
-              </a>
-            )
-          }
+        {
+          url && (
+            <div class="flex items-center gap-4">
+              {url && (
+                <a
+                  href={url}
+                  class="btn btn-link flex min-w-max items-center gap-2"
+                >
+                  <Icon icon="externalLink" size="1.3em" />
+                  View Site
+                </a>
+              )}
 
-          {
-            githubUrl && (
-              <a href={githubUrl} class="btn btn-black flex items-center gap-2">
-                <Icon icon="githubLogo" size="1.3em" />
-                Github
-              </a>
-            )
-          }
-        </div>
+              {githubUrl && (
+                <a
+                  href={githubUrl}
+                  class="btn btn-black flex items-center gap-2"
+                >
+                  <Icon icon="githubLogo" size="1.3em" />
+                  Github
+                </a>
+              )}
+            </div>
+          )
+        }
       </div>
-      <p class="text-lg text-stone-300 lg:text-xl">
+      <p class="max-w-sm text-lg text-stone-300 md:max-w-lg lg:text-xl">
         {
           typeof tagline === "string"
             ? tagline
@@ -65,7 +77,10 @@ const { align = "start", title, tagline, url, githubUrl } = Astro.props;
     {
       Astro.slots.has("default") && (
         <div
-          class:list={["gap-4 lg:flex", align === "center" && "justify-center"]}
+          class:list={[
+            "flex flex-wrap justify-center gap-4 lg:justify-start",
+            align === "center" && "justify-center",
+          ]}
         >
           <slot />
         </div>
