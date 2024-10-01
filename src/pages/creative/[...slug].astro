@@ -36,7 +36,7 @@ const { Content } = await entry.render();
           <a class="back-link" href="/creative/"
             ><Icon icon="arrowLeft" /> Creative Projects</a
           >
-          <Hero title={entry.data.title} align="start">
+          <Hero title={entry.data.title} url={entry.data.url} align="start">
             <div class="details w-full">
               <div class="tags">
                 {entry.data.tags.map((t: unknown) => <Pill>{t}</Pill>)}
@@ -59,7 +59,9 @@ const { Content } = await entry.render();
               />
             )
           }
-          <div class="content">
+          <div
+            class="prose-a:gradient-text prose-cite:text-accent prose mx-auto p-2 text-xl prose-headings:text-zinc-100 prose-p:text-zinc-100 prose-blockquote:border-l-4 prose-blockquote:px-6 prose-blockquote:py-2 prose-blockquote:font-brand prose-blockquote:text-stone-100 prose-ul:text-zinc-100 prose-img:border-4 prose-img:border-fuchsia-500"
+          >
             <Content />
           </div>
         </div>
@@ -96,6 +98,7 @@ const { Content } = await entry.render();
   .description {
     font-size: var(--text-lg);
     max-width: 54ch;
+    text-align: center;
   }
 
   .content {
@@ -116,13 +119,13 @@ const { Content } = await entry.render();
   }
 
   .content :global(img) {
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     box-shadow: var(--shadow-sm);
     background: var(--gradient-subtle);
     border: 1px solid var(--stone-800);
   }
 
-  .content :global(blockquote) {
+  /* .content :global(blockquote) {
     font-size: var(--text-lg);
     font-family: var(--font-brand);
     font-weight: 600;
@@ -130,7 +133,7 @@ const { Content } = await entry.render();
     padding-inline-start: 1.5rem;
     border-inline-start: 0.25rem solid var(--accent-dark);
     color: var(--stone-0);
-  }
+  } */
 
   .back-link,
   .content :global(a) {
@@ -157,8 +160,13 @@ const { Content } = await entry.render();
       gap: 2.5rem;
     }
 
-    .content :global(blockquote) {
-      font-size: var(--text-2xl);
+    .description {
+      font-size: var(--text-lg);
+      text-align: end;
     }
+
+    /* .content :global(blockquote) {
+      font-size: var(--text-2xl);
+    } */
   }
 </style>

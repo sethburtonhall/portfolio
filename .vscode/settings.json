@@ -4,5 +4,25 @@
   "prettier.tabWidth": 4,
   "prettier.bracketSameLine": true,
   "prettier.printWidth": 80,
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#da23b1",
+    "activityBar.background": "#da23b1",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#9cc01f",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#da23b1",
+    "statusBar.background": "#ae1c8d",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#da23b1",
+    "statusBarItem.remoteBackground": "#ae1c8d",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#ae1c8d",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#ae1c8d99",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#AE1C8D"
 }

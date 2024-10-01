@@ -24,6 +24,7 @@ export const creativeCollections = {
         subCategory: z.string(),
         title: z.string(),
         description: z.string(),
+        url: z.string(),
         publishDate: z.coerce.date(),
         tags: z.array(z.string()),
         img: image(),

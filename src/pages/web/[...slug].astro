@@ -118,7 +118,9 @@ const formattedTopics = filteredTopics?.map((tag: string) =>
               />
             )
           }
-          <div class="content">
+          <div
+            class="prose-a:gradient-text prose mx-auto p-2 text-xl prose-headings:text-zinc-100 prose-p:text-zinc-100 prose-blockquote:border-l-4 prose-blockquote:bg-fuchsia-500 prose-blockquote:bg-opacity-50 prose-blockquote:px-6 prose-blockquote:py-2 prose-blockquote:font-brand prose-blockquote:text-sm prose-blockquote:text-accent prose-ul:text-zinc-100 prose-img:border-4 prose-img:border-fuchsia-500"
+          >
             <Content />
           </div>
         </div>
@@ -149,12 +151,15 @@ const formattedTopics = filteredTopics?.map((tag: string) =>
 
   .tags {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.5rem;
   }
 
   .description {
-    font-size: var(--text-lg);
-    max-width: 54ch;
+    font-size: var(--text-base);
+    max-width: 40ch;
+    text-align: center;
   }
 
   .content {
@@ -175,7 +180,7 @@ const formattedTopics = filteredTopics?.map((tag: string) =>
   }
 
   .content :global(img) {
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     box-shadow: var(--shadow-sm);
     background: var(--gradient-subtle);
     border: 1px solid var(--stone-800);
@@ -216,8 +221,17 @@ const formattedTopics = filteredTopics?.map((tag: string) =>
       gap: 2.5rem;
     }
 
+    .tags {
+      justify-content: start;
+    }
+
     .content :global(blockquote) {
       font-size: var(--text-2xl);
+    }
+
+    .description {
+      font-size: var(--text-lg);
+      text-align: end;
     }
   }
 </style>

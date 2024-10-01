@@ -86,9 +86,19 @@ const skills: {
 ---
 
 <section
-  class="grid grid-cols-1 gap-12 rounded rounded-xl border-4 border-transparent p-10 shadow lg:grid-cols-2 lg:gap-16 lg:p-6"
-  style="border-image: linear-gradient(to right, var(--gradient-stop-1), var(--gradient-stop-2), var(--gradient-stop-3)) 1;"
+  class="relative grid grid-cols-1 gap-12 rounded-xl p-10 shadow lg:gap-16"
 >
+  <div
+    class="absolute inset-0 rounded-xl bg-gradient-to-r from-[var(--gradient-stop-1)] via-[var(--gradient-stop-2)] to-[var(--gradient-stop-3)] p-1"
+    style="
+      mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+    "
+  >
+  </div>
+
   {
     skills.map((skill) => (
       <div class="stack gap-2 lg:gap-4">
@@ -99,12 +109,12 @@ const skills: {
           gradient
         />
         <h2 class="text-lg lg:text-2xl">{skill.title}</h2>
-        {/* <ul class="flex list-none flex-wrap gap-1 text-sm italic text-stone-500">
+        {/* <ul class="flex list-none flex-wrap gap-1 text-sm italic text-stone-300">
           {skill.skills?.map((skill) => (
             <li>{skill} | </li>
           ))}
         </ul> */}
-        <p class="text-stone-500">{skill.description}</p>
+        <p class="text-stone-300 lg:text-lg">{skill.description}</p>
       </div>
     ))
   }

@@ -44,7 +44,7 @@ const { align = "start", title, tagline, url, githubUrl } = Astro.props;
           }
         </div>
       </div>
-      <p class="text-lg text-stone-500 lg:text-xl">
+      <p class="text-lg text-stone-300 lg:text-xl">
         {
           typeof tagline === "string"
             ? tagline
@@ -65,10 +65,7 @@ const { align = "start", title, tagline, url, githubUrl } = Astro.props;
     {
       Astro.slots.has("default") && (
         <div
-          class:list={[
-            "hidden gap-4 lg:flex",
-            align === "center" && "justify-center",
-          ]}
+          class:list={["gap-4 lg:flex", align === "center" && "justify-center"]}
         >
           <slot />
         </div>
@@ -79,7 +76,7 @@ const { align = "start", title, tagline, url, githubUrl } = Astro.props;
 
 <style>
   .btn {
-    @apply rounded-lg px-3 py-2 font-bold no-underline;
+    @apply rounded-lg px-2 py-1 font-bold no-underline lg:px-3 lg:py-2;
   }
   .btn-link {
     @apply bg-accent-regular text-white;
