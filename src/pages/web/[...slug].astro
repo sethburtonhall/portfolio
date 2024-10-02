@@ -73,6 +73,7 @@ const formattedTopics = filteredTopics?.map((tag: string) =>
   tag
     // if includes js at end replace with .js
     .replace(/js$/g, ".js")
+    .replace(/Shadcn-ui/g, "shadcn/ui")
     .replace(/-ui/g, " UI")
     .replace(/-api/g, " API")
     .replace(/cms/g, " CMS")
@@ -119,7 +120,7 @@ const formattedTopics = filteredTopics?.map((tag: string) =>
             )
           }
           <div
-            class="prose-a:gradient-text prose mx-auto p-2 text-xl prose-headings:text-zinc-100 prose-p:text-zinc-100 prose-blockquote:border-l-4 prose-blockquote:bg-fuchsia-500 prose-blockquote:bg-opacity-50 prose-blockquote:px-6 prose-blockquote:py-2 prose-blockquote:font-brand prose-blockquote:text-sm prose-blockquote:text-accent prose-strong:text-zinc-100 prose-ul:text-zinc-100 prose-img:border-4 prose-img:border-fuchsia-500"
+            class="prose-a:gradient-text prose prose-lg mx-auto p-2 lg:prose-xl prose-headings:text-zinc-100 prose-p:text-zinc-100 prose-blockquote:border-l-4 prose-blockquote:bg-fuchsia-500 prose-blockquote:bg-opacity-50 prose-blockquote:px-6 prose-blockquote:py-2 prose-blockquote:font-brand prose-blockquote:text-sm prose-blockquote:text-accent prose-strong:text-zinc-100 prose-ul:text-zinc-100 prose-img:border-4 prose-img:border-fuchsia-500"
           >
             <Content />
           </div>
@@ -155,7 +156,7 @@ const formattedTopics = filteredTopics?.map((tag: string) =>
   }
 
   .description {
-    font-size: var(--text-base);
+    font-size: var(--text-md);
     text-align: center;
   }
 
@@ -184,7 +185,7 @@ const formattedTopics = filteredTopics?.map((tag: string) =>
   }
 
   .content :global(blockquote) {
-    font-size: var(--text-lg);
+    /* font-size: var(--text-lg); */
     font-family: var(--font-brand);
     font-weight: 600;
     line-height: 1.1;
@@ -224,11 +225,10 @@ const formattedTopics = filteredTopics?.map((tag: string) =>
     }
 
     .content :global(blockquote) {
-      font-size: var(--text-2xl);
+      /* font-size: var(--text-2xl); */
     }
 
     .description {
-      font-size: var(--text-lg);
       text-align: start;
     }
   }

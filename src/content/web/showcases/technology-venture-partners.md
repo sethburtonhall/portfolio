@@ -12,4 +12,11 @@ tags:
   - Jekyll
 ---
 
-this is markdown content
+## Introduction
+
+Technology Venture Partners is a venture capital firm that accelerates innovators & entrepreneurs through active investment. I was responsible for building the marketing site by splicing the provided design into a Jekyll theme and integrating content from CloudCannon.
+
+### Tech Stack
+
+- **CloudCannon**: The visual CMS that gives content teams full autonomy on your developer-approved tech stack.
+- **Jekyll**: Simple, blog-aware, static site generator.

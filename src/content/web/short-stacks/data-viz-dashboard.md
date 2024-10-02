@@ -19,11 +19,17 @@ In this shortstack, we will explore basic features, the tech stack, and use case
 - **Responsive Design**: A dashboard should be designed to be fully responsive, ensuring optimal performance and usability across a wide range of devices, from desktops to mobile phones. This adaptability enhances user experience by providing consistent access to data visualizations, regardless of the device being used.
 - **User Profile and Settings**: Users need create and manage their profiles and customize their dashboard settings to suit their preferences. Options could include theme selection (light or dark mode), data refresh rate, default chart type, and the ability to toggle legends, animation and notifications. This personalization would ensure a tailored user experience, enhancing usability and satisfaction.
 
-### Potential Future Features
+### Future Features
 
 - **Data Filtering and Sorting**: Users could filter and sort data based on various criteria, allowing them to focus on the most relevant information. This feature would be particularly useful for large datasets where finding specific insights can be challenging.
 - **Real-time Data Updates**: The dashboard could support real-time data updates, ensuring that users always have access to the most current information. This would be crucial for applications where timely data is essential, such as financial analysis or performance monitoring.
 - **Export Options**: Users could export data and visualizations in multiple formats, including CSV and PDF. This would make it easy to share insights with colleagues or include visualizations in reports and presentations.
+
+### Use Cases
+
+- **Business Intelligence**: Businesses could use a dashboard to visualize sales data, track performance metrics, and identify trends, enabling data-driven decision-making.
+- **Performance Monitoring**: Users could monitor key performance indicators (KPIs) in real-time, providing insights into operational efficiency and areas for improvement.
+- **Trend Analysis**: Users could analyze trends over time, helping them to identify patterns and make predictions based on historical data.
 
 ### Tech Stack
 
@@ -38,11 +44,3 @@ In this shortstack, we will explore basic features, the tech stack, and use case
 A backend could be integrated to ensure fast and relieable data processing and API responses ensuring that users have access to a wide range of information.
 
 Data could be stored in a database to offer flexibility and scalability for handling large datasets.
-
-### Use Cases
-
-- **Business Intelligence**: Businesses could use a dashboard to visualize sales data, track performance metrics, and identify trends, enabling data-driven decision-making.
-
-- **Performance Monitoring**: Users could monitor key performance indicators (KPIs) in real-time, providing insights into operational efficiency and areas for improvement.
-
-- **Trend Analysis**: Users could analyze trends over time, helping them to identify patterns and make predictions based on historical data.

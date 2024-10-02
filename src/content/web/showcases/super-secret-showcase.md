@@ -1,7 +1,7 @@
 ---
 category: web
 subCategory: showcase
-title: Enterprise Composable Frontend
+title: Enterprise Composable
 description: I developed a composable stack for efficient cross team collaboration
 publishDate: 2020-03-02 00:00:00
 img: /assets/web/showcases/code.jpg
