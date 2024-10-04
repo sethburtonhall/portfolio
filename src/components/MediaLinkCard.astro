@@ -14,7 +14,7 @@ const { className, url } = Astro.props;
 
 <div
   class:list={[
-    "bg-card text-card-foreground w-fullgap-6 flex overflow-hidden rounded-xl border shadow-sm",
+    "bg-card text-card-foreground flex w-full gap-6 overflow-hidden rounded-xl shadow-sm",
     className,
   ]}
 >
@@ -28,7 +28,9 @@ const { className, url } = Astro.props;
       />
     </div>
 
-    <div class="stack justify-between p-6">
+    <div
+      class="stack justify-between rounded-xl border border-rose-400 p-6 md:rounded-bl-none md:rounded-tl-none md:border-l-0"
+    >
       <div>
         <h5 class="mb-1">From Film Production to Web Developer</h5>
         <p class="mb-2 text-sm text-muted-foreground">

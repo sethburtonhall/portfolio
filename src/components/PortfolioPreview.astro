@@ -10,6 +10,7 @@ const { data, slug } = Astro.props.project;
 
 const formattedTitle = data.title
   .replace(/dks-/g, "DKS ")
+  .replace(/-hd/g, " H.D.")
   .replace(/-/g, " ")
   .replace(/\b\w/g, (c: any) => c.toUpperCase());
 
