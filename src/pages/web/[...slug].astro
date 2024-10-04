@@ -63,9 +63,13 @@ const filteredTopics = capitalizedTopics?.filter(
 
 // format the title to uppercase dks and replace the dashes with spaces and capitalize the first letter of each word
 const formattedTitle = entry.data.title
+  // reformat specific titles
   .replace(/tip-top/g, "TipTop")
   .replace(/dks-/g, "DKS ")
+  .replace(/-hd/g, " H.D.")
+  // replace - with space
   .replace(/-/g, " ")
+  // capitalize the first letter of each word
   .replace(/\b\w/g, (c: any) => c.toUpperCase());
 
 // format the topics to change -api to API
