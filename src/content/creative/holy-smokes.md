@@ -19,4 +19,4 @@ Every week when my batch of weekly cartoons would go to FedEx, it felt like a sm
 
 ## Introduction
 
-Holy Smokes was a comic strip that I created with my friend and illustrator Hugh Greene. I developed the concept and served as co-writing and Creative Producer.
+Holy Smokes was a comic strip that I created with my friend and illustrator Hugh Greene. I developed the concept and served as co-writing and creative producer.

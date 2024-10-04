@@ -22,7 +22,7 @@ tags:
 #   - Gitlab
 ---
 
-I was the lead frontend developer of a composable architecture that enabled teams to work together seamlessly, each within their own optimized experience, without delays or heavy reliance on developers.
+I was the lead frontend engineer of a composable architecture that enabled teams to work together seamlessly, each within their own optimized experience, without delays or heavy reliance on developers. I am unable to share the product or code, but I can share what I learned and the approach we took.
 
 ## Tech Stack
 

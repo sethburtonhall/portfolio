@@ -171,10 +171,6 @@
     @apply m-0 box-border;
   }
 
-  img {
-    @apply h-auto max-w-full;
-  }
-
   a {
     @apply cursor-pointer text-link underline underline-offset-2 transition-colors hover:text-link-hover focus:text-link-hover;
   }

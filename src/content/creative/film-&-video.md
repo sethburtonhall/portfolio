@@ -22,4 +22,4 @@ When given an opportunity, deliver excellence and never quit.
 
 ## Introduction
 
-I spent over 15 years in film and video production. As a multi-hyphenate, I did everything from writing and directing to camera and editing. These are some of my favorite personal and client projects.
+I spent over 15 years in film and video production. As a multi-hyphenate, I did everything from writing, producing and directing, to camera and editing. These are some of my favorite personal and client projects.

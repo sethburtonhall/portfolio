@@ -53,9 +53,10 @@ const { Content } = await entry.render();
               <Picture
                 src={entry.data.img}
                 alt={entry.data.img_alt || ""}
-                width={800}
-                height={800}
+                width={1600}
+                height={900}
                 loading="eager"
+                class="aspect-video object-cover"
               />
             )
           }
@@ -164,9 +165,5 @@ const { Content } = await entry.render();
       font-size: var(--text-lg);
       text-align: end;
     }
-
-    /* .content :global(blockquote) {
-      font-size: var(--text-2xl);
-    } */
   }
 </style>
