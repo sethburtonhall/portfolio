@@ -20,11 +20,15 @@ const { title, description } = Astro.props;
     <ViewTransitions />
     <MainHead
       title={title ? title : "Seth Hall Creative"}
-      description={description}
+      description={description
+        ? description
+        : "The online portfolio of Seth Hall, a web developer and creative producer."}
     />
     <SEO
       title={title ? title : "Seth Hall Creative"}
-      description={description}
+      description={description
+        ? description
+        : "The online portfolio of Seth Hall, a web developer and creative producer."}
       openGraph={{
         basic: {
           title: title ? title : "Seth Hall Creative",
@@ -45,7 +49,9 @@ const { title, description } = Astro.props;
           },
           {
             name: "twitter:description",
-            content: description,
+            content: description
+              ? description
+              : "The online portfolio of Seth Hall, a web developer and creative producer.",
           },
           {
             name: "twitter:card",
