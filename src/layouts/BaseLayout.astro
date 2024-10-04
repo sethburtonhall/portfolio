@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import { SEO } from "astro-seo";
 
 import MainHead from "../components/MainHead.astro";
 import Nav from "../components/Nav.astro";
@@ -10,6 +11,7 @@ interface Props {
   description?: string | undefined;
 }
 
+const image = "/social_card.png";
 const { title, description } = Astro.props;
 ---
 
@@ -19,6 +21,38 @@ const { title, description } = Astro.props;
     <MainHead
       title={title ? title : "Seth Hall Creative"}
       description={description}
+    />
+    <SEO
+      title={title ? title : "Seth Hall Creative"}
+      description={description}
+      openGraph={{
+        basic: {
+          title: title ? title : "Seth Hall Creative",
+          type: "website",
+          image: image,
+          url: "https://sethhallcreative.com",
+        },
+      }}
+      extend={{
+        meta: [
+          {
+            name: "twitter:image",
+            content: image,
+          },
+          {
+            name: "twitter:title",
+            content: title ? title : "Seth Hall Creative",
+          },
+          {
+            name: "twitter:description",
+            content: description,
+          },
+          {
+            name: "twitter:card",
+            content: "summary_large_image",
+          },
+        ],
+      }}
     />
   </head>
   <body>
