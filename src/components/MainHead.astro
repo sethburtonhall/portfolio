@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css";
+import { SEO } from "astro-seo";
 
 interface Props {
   title?: string | undefined;
@@ -8,6 +9,11 @@ interface Props {
 
 const { title = "Seth Hall Creative", description = "Seth Hall Creative" } =
   Astro.props;
+
+const image = "/social_card.png";
+const siteTitle = "Seth Hall Creative";
+const siteDescription =
+  "The online portfolio of Seth Hall, a web developer and creative producer.";
 ---
 
 <meta charset="UTF-8" />
@@ -22,6 +28,36 @@ const { title = "Seth Hall Creative", description = "Seth Hall Creative" } =
 <link
   href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
   rel="stylesheet"
+/>
+
+<SEO
+  title={siteTitle}
+  description={siteDescription}
+  openGraph={{
+    basic: {
+      title: siteTitle,
+      type: "website",
+      image: image,
+      url: "https://sethhallcreative.com",
+    },
+  }}
+  extend={{
+    meta: [
+      {
+        name: "twitter:image",
+        content: image,
+      },
+      { name: "twitter:title", content: { siteTitle } },
+      {
+        name: "twitter:description",
+        content: { siteDescription },
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+    ],
+  }}
 />
 <script is:inline>
   // This code is inlined in the head to make dark mode instant & blocking.
