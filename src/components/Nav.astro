@@ -16,7 +16,6 @@ const iconLinks: {
   label: string;
   href: string;
   icon: keyof typeof iconPaths;
-  download?: string;
 }[] = [
   {
     label: "GitHub",
@@ -32,7 +31,6 @@ const iconLinks: {
     label: "Download CV",
     href: "seth_hall_resume.pdf",
     icon: "resume",
-    download: "seth_hall_resume.pdf",
   },
 ];
 ---
@@ -83,7 +81,7 @@ const iconLinks: {
     <div class="menu-footer">
       <div class="socials">
         {
-          iconLinks.map(({ href, icon, label, download }) => (
+          iconLinks.map(({ href, icon, label }) => (
             <a href={href} class="social" title={label}>
               <span class="sr-only">{label}</span>
               <Icon icon={icon} />
