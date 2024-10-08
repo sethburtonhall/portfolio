@@ -44,7 +44,7 @@
 - tag with `showcase/shortstack`
 - add other relevant `tags`
 
-  > the project page at `web/**/*` will pull the tags and description from the repo.
+  > the project page at `web/**/*` will pull the tags, url and description from the repo.
 
 - add an image to the appropriate `public/assets/web/*` directory
 - add a matching `.md` file in the `content/web` directory with the appropriate `frontmatter` and `content`.

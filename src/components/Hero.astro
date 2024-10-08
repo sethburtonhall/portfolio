@@ -21,7 +21,10 @@ const hasUrl = url || githubUrl;
 >
   <div class="stack gap-8">
     <div
-      class:list={["stack gap-2 md:items-start", hasUrl && "!items-stretch"]}
+      class:list={[
+        "stack gap-2 md:items-center lg:items-start",
+        hasUrl && "!items-stretch",
+      ]}
     >
       <div
         class:list={[
@@ -29,7 +32,7 @@ const hasUrl = url || githubUrl;
           hasUrl && "justify-between",
         ]}
       >
-        <h1 class="text-3xl tracking-tighter md:text-4xl xl:text-5xl">
+        <h1 class="text-3xl tracking-tighter xl:text-5xl">
           {title}
         </h1>
         {
