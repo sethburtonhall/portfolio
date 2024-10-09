@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-import Hero from "@/components/Hero.astro";
+import HeroSimple from "@/components/HeroSimple.astro";
 import Grid from "@/components/Grid.astro";
 import PortfolioPreview from "@/components/PortfolioPreview.astro";
 import ContactCTA from "@/components/ContactCTA.astro";
@@ -31,13 +31,12 @@ const shortstacks = projects.filter(
   description="Learn about Seth Hall's most recent web projects"
 >
   <div class="stack gap-20">
-    <main class="stack container gap-8">
-      <Hero
+    <main class="stack container gap-14">
+      <HeroSimple
         title="Web Projects"
         tagline="Explore this collection of web projects to get an idea of my past experience."
-        align="start"
       />
-      <div class="stack gap-24">
+      <div class="stack gap-14">
         <div class="stack gap-4">
           <div class="flex items-center gap-2">
             <Icon icon="swatch" size="2em" />
@@ -53,11 +52,11 @@ const shortstacks = projects.filter(
             }
           </Grid>
         </div>
-
+        <hr class="opacity-20" />
         <div class="stack gap-4">
           <div class="flex items-center gap-2">
-            <h3 class="max-md:text-xl">Showcases</h3>
             <Icon icon="stack" size="2em" />
+            <h3 class="max-md:text-xl">Showcases</h3>
           </div>
           <Grid variant="offset">
             {

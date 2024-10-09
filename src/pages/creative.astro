@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-import Hero from "@/components/Hero.astro";
+import HeroSimple from "@/components/HeroSimple.astro";
 import Grid from "@/components/Grid.astro";
 import PortfolioPreview from "@/components/PortfolioPreview.astro";
 import ContactCTA from "@/components/ContactCTA.astro";
@@ -21,11 +21,10 @@ const projects = (await getCollection("creative")).sort(
   description="Learn about Seth Hall's most recent creative projects"
 >
   <div class="stack gap-20">
-    <main class="stack container gap-8">
-      <Hero
+    <main class="stack container gap-14">
+      <HeroSimple
         title="Creative Projects"
         tagline="Explore my diverse creative portfolio, featuring projects across multiple mediums."
-        align="start"
       />
       <Grid variant="offset">
         {

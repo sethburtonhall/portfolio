@@ -6,99 +6,98 @@ interface Props {
   tagline?: string | (string | { text: string })[];
   url?: string;
   githubUrl?: string;
-  align?: "start" | "center";
+  variant: string;
 }
 
-const { align = "start", title, tagline, url, githubUrl } = Astro.props;
+const { title, tagline, url, githubUrl, variant } = Astro.props;
 const hasUrl = url || githubUrl;
+const isHome = variant === "home";
 ---
 
 <section
   class:list={[
-    align === "start" && "text-center lg:text-left",
-    align === "center" && "text-center",
+    "stack gap-8 text-center md:text-left",
+    isHome && "text-center md:text-center lg:text-left",
   ]}
 >
-  <div class="stack gap-8">
+  <div
+    class:list={[
+      "stack items-center gap-2 md:items-start",
+      isHome && "md:items-center",
+      hasUrl && "!items-stretch",
+    ]}
+  >
     <div
       class:list={[
-        "stack gap-2 md:items-center lg:items-start",
-        hasUrl && "!items-stretch",
+        "stack items-center justify-center gap-4 md:flex-row",
+        hasUrl && "justify-between",
       ]}
     >
+      <h1 class="text-xl tracking-tighter md:text-2xl lg:text-3xl xl:text-5xl">
+        {title}
+      </h1>
+      {
+        url && (
+          <div class="flex items-center gap-4">
+            {url && (
+              <a
+                href={url}
+                class="btn btn-link flex min-w-max items-center gap-2"
+              >
+                <Icon icon="externalLink" size="1.3em" />
+                View Site
+              </a>
+            )}
+
+            {githubUrl && (
+              <a href={githubUrl} class="btn btn-black flex items-center gap-2">
+                <Icon icon="githubLogo" size="1.3em" />
+                Github
+              </a>
+            )}
+          </div>
+        )
+      }
+    </div>
+    <p
+      class:list={[
+        "mx-auto max-w-xs text-md text-stone-300 md:mx-0 md:max-w-none md:text-lg lg:self-start",
+        isHome && "self-center md:max-w-sm",
+      ]}
+    >
+      {
+        typeof tagline === "string"
+          ? tagline
+          : tagline?.map((item) =>
+              typeof item === "string" ? (
+                item
+              ) : (
+                <Fragment>
+                  <span class="font-semibold text-accent-regular">
+                    {item.text}
+                  </span>
+                </Fragment>
+              ),
+            )
+      }
+    </p>
+  </div>
+  {
+    Astro.slots.has("default") && (
       <div
         class:list={[
-          "stack items-center justify-center gap-4 md:flex-row",
-          hasUrl && "justify-between",
+          "mx-auto flex max-w-sm flex-wrap justify-center gap-4 md:mx-0 md:max-w-none lg:justify-start",
         ]}
       >
-        <h1 class="text-3xl tracking-tighter xl:text-5xl">
-          {title}
-        </h1>
-        {
-          url && (
-            <div class="flex items-center gap-4">
-              {url && (
-                <a
-                  href={url}
-                  class="btn btn-link flex min-w-max items-center gap-2"
-                >
-                  <Icon icon="externalLink" size="1.3em" />
-                  View Site
-                </a>
-              )}
-
-              {githubUrl && (
-                <a
-                  href={githubUrl}
-                  class="btn btn-black flex items-center gap-2"
-                >
-                  <Icon icon="githubLogo" size="1.3em" />
-                  Github
-                </a>
-              )}
-            </div>
-          )
-        }
+        <slot />
       </div>
-      <p
-        class="max-w-sm self-center text-lg text-stone-300 md:max-w-lg lg:max-w-none lg:self-start lg:text-xl"
-      >
-        {
-          typeof tagline === "string"
-            ? tagline
-            : tagline?.map((item) =>
-                typeof item === "string" ? (
-                  item
-                ) : (
-                  <Fragment>
-                    <span class="font-semibold text-accent-regular">
-                      {item.text}
-                    </span>
-                  </Fragment>
-                ),
-              )
-        }
-      </p>
-    </div>
-    {
-      Astro.slots.has("default") && (
-        <div
-          class:list={[
-            "flex flex-wrap justify-center gap-4 lg:justify-start",
-            align === "center" && "justify-center",
-          ]}
-        >
-          <slot />
-        </div>
-      )
-    }
-  </div>
+    )
+  }
 </section>
 
 <style>
   .btn {
-    @apply rounded-lg px-2 py-1 font-bold no-underline lg:px-3 lg:py-2;
+    @apply rounded-lg px-2 py-1 font-bold no-underline xl:px-3 xl:py-2;
   }
   .btn-link {
     @apply bg-accent-regular text-white;
@@ -106,7 +105,6 @@ const hasUrl = url || githubUrl;
   .btn-link:hover {
     @apply bg-[#c561f6];
   }
-
   .btn-black {
     @apply bg-foreground text-background;
   }

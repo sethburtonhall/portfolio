@@ -67,7 +67,7 @@ const mediaUrl =
             { text: "Creative Producer" },
             " living and working from my Airstream as I travel the US.",
           ]}
-          align="start"
+          variant="home"
         >
           <Pill url="/web/">
             <Icon icon="code" size="1.2em" />
@@ -188,8 +188,7 @@ const mediaUrl =
   }
 
   .section-header {
-    justify-self: center;
-    text-align: center;
+    /* justify-self: center; */
     max-width: 50ch;
     font-size: var(--text-md);
     color: var(--stone-300);
@@ -216,7 +215,7 @@ const mediaUrl =
     }
 
     .section-header h3 {
-      font-size: var(--text-4xl);
+      font-size: var(--text-3xl);
     }
 
     .with-cta .section-header {
@@ -230,6 +229,12 @@ const mediaUrl =
 
     .cta {
       grid-area: cta;
+    }
+  }
+
+  @media (min-width: 60em) {
+    .section-header h3 {
+      font-size: var(--text-4xl);
     }
   }
 </style>

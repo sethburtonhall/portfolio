@@ -97,15 +97,14 @@ const formattedTopics = filteredTopics?.map((tag: string) =>
           >
           <Hero
             title={formattedTitle}
+            tagline={description}
             url={url}
             githubUrl={githubUrl}
-            align="start"
           >
             <div class="details w-full">
               <div class="tags">
                 {formattedTopics?.map((t: unknown) => <Pill>{t}</Pill>)}
               </div>
-              <p class="description">{description}</p>
             </div>
           </Hero>
         </div>
@@ -158,11 +157,6 @@ const formattedTopics = filteredTopics?.map((tag: string) =>
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
-  }
-
-  .description {
-    font-size: var(--text-md);
-    text-align: center;
   }
 
   .content {
@@ -228,24 +222,11 @@ const formattedTopics = filteredTopics?.map((tag: string) =>
     .tags {
       justify-content: start;
     }
-
-    .content :global(blockquote) {
-      /* font-size: var(--text-2xl); */
-    }
-
-    .description {
-      text-align: start;
-    }
   }
 
   @media (min-width: 70em) {
     .details {
       flex-direction: row;
-    }
-
-    .description {
-      max-width: 60ch;
-      text-align: end;
     }
   }
 </style>
