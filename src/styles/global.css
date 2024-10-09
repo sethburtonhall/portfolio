@@ -208,6 +208,10 @@
     @apply text-base;
   }
 
+  footer a {
+    color: var(--accent-dark);
+  }
+
   ul {
     @apply list-disc;
   }
