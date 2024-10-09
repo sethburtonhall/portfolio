@@ -3,13 +3,14 @@ import Icon from "@/components/Icon.astro";
 
 interface Props {
   title: string;
+  name?: string;
   tagline?: string | (string | { text: string })[];
   url?: string;
   githubUrl?: string;
   variant?: string;
 }
 
-const { title, tagline, url, githubUrl, variant } = Astro.props;
+const { title, name, tagline, url, githubUrl, variant } = Astro.props;
 const hasUrl = url || githubUrl;
 const isHome = variant === "home";
 ---
@@ -23,7 +24,7 @@ const isHome = variant === "home";
   <div
     class:list={[
       "stack items-center gap-4 md:items-start",
-      isHome && "md:items-center",
+      isHome && "md:items-center lg:items-start",
       hasUrl && "!items-stretch",
     ]}
   >
@@ -33,9 +34,18 @@ const isHome = variant === "home";
         hasUrl && "justify-between",
       ]}
     >
-      <h1 class="text-xl tracking-tighter md:text-2xl lg:text-3xl xl:text-5xl">
-        {title}
-      </h1>
+      <div>
+        <h1
+          class="text-xl tracking-tighter md:text-2xl lg:text-3xl xl:text-4xl"
+        >
+          {title}
+        </h1>
+        <h2
+          class="text-2xl tracking-tighter md:text-3xl lg:text-4xl xl:text-5xl"
+        >
+          {name}
+        </h2>
+      </div>
       {
         url && (
           <div class="flex items-center gap-4">
