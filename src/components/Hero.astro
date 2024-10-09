@@ -87,6 +87,7 @@ const isHome = variant === "home";
       <div
         class:list={[
           "mx-auto flex max-w-sm flex-wrap justify-center gap-4 md:mx-0 md:max-w-none lg:justify-start",
+          isHome && "!max-w-none",
         ]}
       >
         <slot />
