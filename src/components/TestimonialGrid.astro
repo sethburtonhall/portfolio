@@ -4,7 +4,7 @@ import TestimonialCard, { type Testimonial } from "./TestimonialCard.astro";
 const testimonials: Testimonial[] = [
   {
     name: "Kurt Wuerfele",
-    title: "President and Executive Coach",
+    title: "President | Executive Coach",
     quote:
       "I highly recommend working with Seth. He is a true asset to any team.",
     testimonial:
@@ -45,6 +45,17 @@ const testimonials: Testimonial[] = [
     bgColor: "bg-slate-800",
     textColor: "text-white",
   },
+  {
+    name: "Max Slabyak",
+    title: "Digital Transformer | Co-Founder | Consultant",
+    quote:
+      "Seth is not only talented but also a genuine team player with an eye for detail and a passion for delivering quality.",
+    testimonial:
+      "I have had the pleasure of working with Seth on a client project implementing Uniform. Seth’s attention to detail and hands-on knowledge of front-end tooling, with an eye for design consistently resulted in top-notch products that exceeded client expectations. His ability to balance technical excellence with a strong business mindset made him an invaluable asset to every project. Not only did Seth produce exceptional work, but his approach also won over both tech teams and business stakeholders alike. I highly recommend Seth to any team looking for a developer who is not only talented but also a genuine team player with an eye for detail and a passion for delivering quality.",
+    image: "../assets/testimonials/max-slabyak.jpg",
+    bgColor: "bg-purple-600",
+    textColor: "text-white",
+  },
   // {
   //   name: "Connor Cox",
   //   title: "UX/UI Designer",
@@ -72,7 +83,7 @@ const testimonials: Testimonial[] = [
   <div class="lg:col-span-5">
     <TestimonialCard {...testimonials[3]} />
   </div>
-  <!-- <div class="lg:col-span-7">
-    <TestimonialCard {...testimonials[4]} />
-  </div> -->
+  <div class="lg:col-span-7">
+    <TestimonialCard {...testimonials[4]} class="h-full" />
+  </div>
 </div>
