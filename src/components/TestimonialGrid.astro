@@ -12,6 +12,7 @@ const testimonials: Testimonial[] = [
     image: "../assets/testimonials/kurt-wuerfele.jpg",
     bgColor: "bg-purple-800",
     textColor: "text-white",
+    colSpan: 7,
   },
   {
     name: "Curtis Edwards",
@@ -22,6 +23,8 @@ const testimonials: Testimonial[] = [
     image: "../assets/testimonials/curtis-edwards.jpg",
     bgColor: "bg-slate-600",
     textColor: "text-white",
+    colSpan: 5,
+    class: "h-full",
   },
   {
     name: "Tim Benniks",
@@ -33,6 +36,7 @@ const testimonials: Testimonial[] = [
     image: "../assets/testimonials/tim-benniks.jpg",
     bgColor: "bg-white",
     textColor: "text-slate-900",
+    colSpan: 12,
   },
   {
     name: "Hannah Callaway",
@@ -44,6 +48,7 @@ const testimonials: Testimonial[] = [
     image: "../assets/testimonials/hannah-callaway.jpg",
     bgColor: "bg-slate-800",
     textColor: "text-white",
+    colSpan: 5,
   },
   {
     name: "Max Slabyak",
@@ -55,6 +60,8 @@ const testimonials: Testimonial[] = [
     image: "../assets/testimonials/max-slabyak.jpg",
     bgColor: "bg-purple-600",
     textColor: "text-white",
+    colSpan: 7,
+    class: "h-full",
   },
   // {
   //   name: "Connor Cox",
@@ -71,19 +78,11 @@ const testimonials: Testimonial[] = [
 ---
 
 <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
-  <div class="lg:col-span-7">
-    <TestimonialCard {...testimonials[0]} />
-  </div>
-  <div class="lg:col-span-5">
-    <TestimonialCard {...testimonials[1]} class="h-full" />
-  </div>
-  <div class="lg:col-span-12">
-    <TestimonialCard {...testimonials[2]} />
-  </div>
-  <div class="lg:col-span-5">
-    <TestimonialCard {...testimonials[3]} />
-  </div>
-  <div class="lg:col-span-7">
-    <TestimonialCard {...testimonials[4]} class="h-full" />
-  </div>
+  {
+    testimonials.map((testimonial) => (
+      <div class={`lg:col-span-${testimonial.colSpan} ${testimonial.class}`}>
+        <TestimonialCard {...testimonial} />
+      </div>
+    ))
+  }
 </div>
