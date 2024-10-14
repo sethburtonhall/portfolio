@@ -24,7 +24,6 @@ const testimonials: Testimonial[] = [
     bgColor: "bg-slate-600",
     textColor: "text-white",
     colSpan: 5,
-    class: "h-full",
   },
   {
     name: "Tim Benniks",
@@ -61,7 +60,6 @@ const testimonials: Testimonial[] = [
     bgColor: "bg-purple-600",
     textColor: "text-white",
     colSpan: 7,
-    class: "h-full",
   },
   // {
   //   name: "Connor Cox",
@@ -81,7 +79,7 @@ const testimonials: Testimonial[] = [
   {
     testimonials.map((testimonial) => (
       <div class={`lg:col-span-${testimonial.colSpan} ${testimonial.class}`}>
-        <TestimonialCard {...testimonial} />
+        <TestimonialCard {...testimonial} class="h-full" />
       </div>
     ))
   }
