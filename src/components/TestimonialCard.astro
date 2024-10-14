@@ -6,8 +6,8 @@ export interface Testimonial {
   testimonial: string;
   image: string;
   bgColor: string;
-  textColor: string;
-  colSpan: number;
+  textColor?: string;
+  colSpan: string;
   class?: string;
 }
 
@@ -18,7 +18,7 @@ const {
   testimonial,
   image,
   bgColor,
-  textColor,
+  textColor = "text-white",
   class: className,
 } = Astro.props as Testimonial;
 ---

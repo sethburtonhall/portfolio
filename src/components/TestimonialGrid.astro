@@ -11,8 +11,7 @@ const testimonials: Testimonial[] = [
       "Seth’s passion and dedication to his work are unmatched, and his commitment to authenticity and collaboration are values that he truly lives by. As a leadership and development coach, I have witnessed firsthand how his approach to work creates a supportive and empowering workplace culture, where creativity and innovation thrive. His unique blend of skills makes him a true asset to any team. If you are looking for a creative partner who embodies the values of authentic communication and collaboration, I highly recommend working with Seth.",
     image: "../assets/testimonials/kurt-wuerfele.jpg",
     bgColor: "bg-purple-800",
-    textColor: "text-white",
-    colSpan: 7,
+    colSpan: "lg:col-span-7",
   },
   {
     name: "Curtis Edwards",
@@ -22,8 +21,7 @@ const testimonials: Testimonial[] = [
       "Seth was an OUTSTANDING teammate to collaborate with in our tenure together. He was not only quick to ask questions but he even quicker to provide solutions – even on problems that I hadn't even crossed the bridge for yet. He was a great pleasure to work with. I'd do it again in a heartbeat!",
     image: "../assets/testimonials/curtis-edwards.jpg",
     bgColor: "bg-slate-600",
-    textColor: "text-white",
-    colSpan: 5,
+    colSpan: "lg:col-span-5",
   },
   {
     name: "Tim Benniks",
@@ -35,7 +33,7 @@ const testimonials: Testimonial[] = [
     image: "../assets/testimonials/tim-benniks.jpg",
     bgColor: "bg-white",
     textColor: "text-slate-900",
-    colSpan: 12,
+    colSpan: "lg:col-span-12",
   },
   {
     name: "Hannah Callaway",
@@ -46,8 +44,7 @@ const testimonials: Testimonial[] = [
       "I enjoyed working with Seth to publish creative, message-focused content for UNCSA. Seth’s organized and intentional approach to his work was much appreciated when juggling ever-evolving production and post-production schedules. He took the time to research and ensure that the team was utilizing all tools that were available to streamline our processes. I’m grateful that our paths crossed, and know that many others will be thrilled for the opportunity to work alongside Seth.",
     image: "../assets/testimonials/hannah-callaway.jpg",
     bgColor: "bg-slate-800",
-    textColor: "text-white",
-    colSpan: 5,
+    colSpan: "lg:col-span-5",
   },
   {
     name: "Max Slabyak",
@@ -58,27 +55,15 @@ const testimonials: Testimonial[] = [
       "I have had the pleasure of working with Seth on a client project implementing Uniform. Seth’s attention to detail and hands-on knowledge of front-end tooling, with an eye for design consistently resulted in top-notch products that exceeded client expectations. His ability to balance technical excellence with a strong business mindset made him an invaluable asset to every project. Not only did Seth produce exceptional work, but his approach also won over both tech teams and business stakeholders alike. I highly recommend Seth to any team looking for a developer who is not only talented but also a genuine team player with an eye for detail and a passion for delivering quality.",
     image: "../assets/testimonials/max-slabyak.jpg",
     bgColor: "bg-purple-600",
-    textColor: "text-white",
-    colSpan: 7,
+    colSpan: "lg:col-span-7",
   },
-  // {
-  //   name: "Connor Cox",
-  //   title: "UX/UI Designer",
-  //   quote:
-  //     "Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and learning from their experiences was easy.",
-  //   testimonial:
-  //     "The staff seem genuinely concerned about my progress which I find really refreshing. The program gave me the confidence necessary to be able to go out in the world and present myself as a capable junior developer. The standard is above the rest. You will get the personal attention you need from an incredible community of smart and amazing people.",
-  //   image: "../assets/testimonials/connor-cox.jpg",
-  //   bgColor: "bg-slate-900",
-  //   textColor: "text-white",
-  // },
 ];
 ---
 
 <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
   {
     testimonials.map((testimonial) => (
-      <div class={`lg:col-span-${testimonial.colSpan} ${testimonial.class}`}>
+      <div class={testimonial.colSpan}>
         <TestimonialCard {...testimonial} class="h-full" />
       </div>
     ))
