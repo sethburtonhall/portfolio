@@ -55,7 +55,7 @@ const mediaUrl =
 <BaseLayout>
   <div class="stack gap-20 lg:gap-28">
     <div class="stack container m-auto gap-28">
-      <header class="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
+      <header class="grid items-center gap-6 md:grid-cols-2 lg:gap-12">
         <Hero
           title="Hello, my name is"
           name="Seth Hall"
@@ -82,7 +82,7 @@ const mediaUrl =
           </Pill>
         </Hero>
         <div
-          class="aspect-[5/4] overflow-hidden rounded-xl object-cover object-top shadow-md lg:order-last lg:aspect-square"
+          class="aspect-[5/4] overflow-hidden rounded-xl object-cover object-top shadow-md md:aspect-auto lg:order-last"
         >
           <Picture src={avatar} alt="Hero" loading="eager" />
         </div>

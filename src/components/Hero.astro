@@ -18,13 +18,13 @@ const isHome = variant === "home";
 <section
   class:list={[
     "stack gap-8 text-center md:text-left",
-    isHome && "text-center md:text-center lg:text-left",
+    isHome && "text-center lg:text-left",
   ]}
 >
   <div
     class:list={[
       "stack items-center gap-4 md:items-start",
-      isHome && "md:items-center lg:items-start",
+      isHome && "items-center md:items-start",
       hasUrl && "!items-stretch",
     ]}
   >
@@ -96,7 +96,7 @@ const isHome = variant === "home";
     Astro.slots.has("default") && (
       <div
         class:list={[
-          "mx-auto flex max-w-sm flex-wrap justify-center gap-4 md:mx-0 md:max-w-none lg:justify-start",
+          "mx-auto flex max-w-sm flex-wrap justify-center gap-4 md:mx-0 md:max-w-none md:justify-start",
           isHome && "!max-w-none",
         ]}
       >
