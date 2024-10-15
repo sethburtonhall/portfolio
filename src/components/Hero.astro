@@ -10,7 +10,7 @@ interface Props {
   variant?: string;
 }
 
-const { title, name, tagline, url, githubUrl, variant } = Astro.props;
+const { title, tagline, url, githubUrl, variant } = Astro.props;
 const hasUrl = url || githubUrl;
 const isHome = variant === "home";
 ---
