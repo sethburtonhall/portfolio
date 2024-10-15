@@ -34,15 +34,15 @@ const isHome = variant === "home";
         hasUrl && "justify-between",
       ]}
     >
-      <div>
+      <div
+        class="md:stack flex flex-row items-center gap-1.5 md:items-start md:gap-0"
+      >
         <h1
           class="text-xl tracking-tighter md:text-2xl lg:text-3xl xl:text-4xl"
         >
           {title}
         </h1>
-        <h2
-          class="text-2xl tracking-tighter md:text-3xl lg:text-4xl xl:text-5xl"
-        >
+        <h2 class="tracking-tighter md:text-3xl lg:text-4xl xl:text-5xl">
           {name}
         </h2>
       </div>
