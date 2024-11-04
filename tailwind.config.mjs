@@ -6,6 +6,9 @@ module.exports = {
     container: {
       center: true,
       padding: "1.5rem",
+      screens: {
+        xl: "1280px",
+      },
     },
     fontFamily: {
       brand: "var(--font-brand)",
